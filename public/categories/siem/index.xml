@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Siem - Category - w01v3r&#39;s cyber dungeon</title>
-        <link>http://localhost:1313/categories/siem/</link>
+        <link>http://example.org/categories/siem/</link>
         <description>Siem - Category - w01v3r&#39;s cyber dungeon</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>abdu_majeed1401@protonmail.com (w01v3r)</managingEditor>
-            <webMaster>abdu_majeed1401@protonmail.com (w01v3r)</webMaster><lastBuildDate>Mon, 09 Oct 2023 13:41:11 &#43;0300</lastBuildDate><atom:link href="http://localhost:1313/categories/siem/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>abdu_majeed1401@protonmail.com (w01v3r)</webMaster><lastBuildDate>Mon, 09 Oct 2023 13:41:11 &#43;0300</lastBuildDate><atom:link href="http://example.org/categories/siem/" rel="self" type="application/rss+xml" /><item>
     <title>Wazuh SIEM</title>
-    <link>http://localhost:1313/wazuh/</link>
+    <link>http://example.org/wazuh/</link>
     <pubDate>Mon, 09 Oct 2023 13:41:11 &#43;0300</pubDate>
     <author>w01v3r</author>
-    <guid>http://localhost:1313/wazuh/</guid>
+    <guid>http://example.org/wazuh/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/wazuh.jpg" referrerpolicy="no-referrer">
             </div>Wazuh SIEM, wolf to the rescue&hellip;wazooo!🐺]]></description>
