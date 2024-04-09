@@ -100,7 +100,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     #  Header title config
     [params.header.title]
       # URL of the LOGO
-      logo = "/w01v3r.png"
+      logo = "w01v3r.png"
       # title name
       name = "Threatscape Vault"
       # you can add extra information before the name (HTML format is supported), such as icons
