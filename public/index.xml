@@ -1,47 +1,47 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>w01v3r&#39;s cyber dungeon</title>
-        <link>http://localhost:1313/</link>
+        <link>http://example.org/</link>
         <description>Welcome to my cybersecurity blog</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>abdu_majeed1401@protonmail.com (w01v3r)</managingEditor>
             <webMaster>abdu_majeed1401@protonmail.com (w01v3r)</webMaster><lastBuildDate>Mon, 08 Apr 2024 22:27:43 &#43;0300</lastBuildDate>
-            <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+            <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>CVE-2024-3094 - XZ Linux Backdoor Analysis</title>
-    <link>http://localhost:1313/xzbackdoor/</link>
+    <link>http://example.org/xzbackdoor/</link>
     <pubDate>Mon, 08 Apr 2024 22:27:43 &#43;0300</pubDate>
     <author>w01v3r</author>
-    <guid>http://localhost:1313/xzbackdoor/</guid>
+    <guid>http://example.org/xzbackdoor/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/xz%20backdoor.png" referrerpolicy="no-referrer">
             </div>XZ Linux Backdoor Analysis that affected millions of linux distributions]]></description>
 </item>
 <item>
     <title>Wazuh SIEM &amp; XDR</title>
-    <link>http://localhost:1313/wazuh/</link>
+    <link>http://example.org/wazuh/</link>
     <pubDate>Mon, 09 Oct 2023 13:41:11 &#43;0300</pubDate>
     <author>w01v3r</author>
-    <guid>http://localhost:1313/wazuh/</guid>
+    <guid>http://example.org/wazuh/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/wazuh.jpg" referrerpolicy="no-referrer">
             </div>Wazuh SIEM, wolf to the rescue&hellip;wazooo!🐺]]></description>
 </item>
 <item>
     <title>Password Generator</title>
-    <link>http://localhost:1313/passwordgen/</link>
+    <link>http://example.org/passwordgen/</link>
     <pubDate>Mon, 09 Oct 2023 00:55:58 &#43;0300</pubDate>
     <author>w01v3r</author>
-    <guid>http://localhost:1313/passwordgen/</guid>
+    <guid>http://example.org/passwordgen/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/passgen.png" referrerpolicy="no-referrer">
             </div>Believe it or not! making complex passwords is actually harder than memorizing them.🤯]]></description>
 </item>
 <item>
     <title>Cybertalents Scholarship</title>
-    <link>http://localhost:1313/cybertalents/</link>
+    <link>http://example.org/cybertalents/</link>
     <pubDate>Mon, 09 Oct 2023 00:42:52 &#43;0300</pubDate>
     <author>w01v3r</author>
-    <guid>http://localhost:1313/cybertalents/</guid>
+    <guid>http://example.org/cybertalents/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/cybertalents.png" referrerpolicy="no-referrer">
             </div>Most sought after scholarship in arabic and african region, read my thrilling journey&hellip;🔥]]></description>
