@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>CVE-2024-3094 - XZ Linux Backdoor Analysis - D3d5ec</title><meta name="Description" content="Welcome to my cybersecurity blog"><meta property="og:title" content="CVE-2024-3094 - XZ Linux Backdoor Analysis" />
+<meta property="og:description" content="XZ Linux Backdoor Analysis that affected millions of linux distributions" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/xzbackdoor/" /><meta property="og:image" content="http://localhost:1313/logo.png" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-04-08T22:27:43+03:00" />
+<meta property="article:modified_time" content="2024-04-09T14:08:43+03:00" /><meta property="og:site_name" content="My cool site" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="http://localhost:1313/logo.png" /><meta name="twitter:title" content="CVE-2024-3094 - XZ Linux Backdoor Analysis"/>
+<meta name="twitter:description" content="XZ Linux Backdoor Analysis that affected millions of linux distributions"/>
+<meta name="application-name" content="D3d5ec cyber blog">
+<meta name="apple-mobile-web-app-title" content="D3d5ec cyber blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/xzbackdoor/" /><link rel="prev" href="http://localhost:1313/vimwithllm/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "CVE-2024-3094 - XZ Linux Backdoor Analysis",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/xzbackdoor\/"
+        },"genre": "posts","keywords": "backdoor, linux","wordcount":  1629 ,
+        "url": "http:\/\/localhost:1313\/xzbackdoor\/","datePublished": "2024-04-08T22:27:43+03:00","dateModified": "2024-04-09T14:08:43+03:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "DedSec"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="D3d5ec"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/images/DedSec.jpg"
+        data-srcset="/images/DedSec.jpg, /images/DedSec.jpg 1.5x, /images/DedSec.jpg 2x"
+        data-sizes="auto"
+        alt="/images/DedSec.jpg"
+        title="/images/DedSec.jpg" />Cyber Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/about/"> About Me </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="D3d5ec"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/images/DedSec.jpg"
+        data-srcset="/images/DedSec.jpg, /images/DedSec.jpg 1.5x, /images/DedSec.jpg 2x"
+        data-sizes="auto"
+        alt="/images/DedSec.jpg"
+        title="/images/DedSec.jpg" />Cyber Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/about/" title="">About Me</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">CVE-2024-3094 - XZ Linux Backdoor Analysis</h1><h2 class="single-subtitle">XZ utils package analysis that affected millions of linux distributions</h2><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>DedSec</a>
+</span>&nbsp;<span class="post-category">included in <a href="/categories/red-team/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Red Team</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-04-08">2024-04-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1629 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;8 minutes&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/xzbackdoor/xz%20backdoor.png"
+        data-srcset="/xzbackdoor/xz%20backdoor.png, /xzbackdoor/xz%20backdoor.png 1.5x, /xzbackdoor/xz%20backdoor.png 2x"
+        data-sizes="auto"
+        alt="/xzbackdoor/xz%20backdoor.png"
+        title="/xzbackdoor/xz%20backdoor.png" width="6912" height="3456" /></div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#intro">Intro</a></li>
+    <li><a href="#understanding-the-attack">Understanding the Attack</a></li>
+    <li><a href="#understanding-the-timeline-of-the-attack">Understanding the timeline of the attack</a></li>
+    <li><a href="#grasping-the-technical-overview-of-the-attack">Grasping the Technical Overview of the Attack</a></li>
+    <li><a href="#assessing-the-potential-impact-of-the-attack">Assessing the Potential Impact of the Attack</a></li>
+    <li><a href="#learning-from-the-incident">Learning from the incident</a></li>
+    <li><a href="#testing-lab">Testing Lab</a></li>
+    <li><a href="#confirm-that-the-ssh-daemon-is-slower-than-usual">Confirm that the SSH Daemon is Slower than Usual</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="intro">Intro</h2>
+<p>Hello folks👋, I will be talking today about the recent incdient of the XZ Utils backdoor that compromised a lot of linux distributions across the world. This incident made the headlines.</p>
+<p>We are going to dive deep into the intricacies and about how this sophisticated attack came to be. This type of attack falls under the type of supply chain attack targeting the XZ Utils project, aimed at embedding a backdoor within linux systems.</p>
+<p>We&rsquo;ll explore the sequence of events leading up to the attack&rsquo;s discovery. Discuss the mechanisms the attacker used, assess the potential repercussions had the attack remained undetected, and reflect on the critical lessons this incident teaches us about cyber security in open-source projects.</p>
+<p>Finally, I will wrap up with lessons learned, a detailed lab environment and the importance of vigilence and proactive security measures in the open-source ecosystem.</p>
+<h2 id="understanding-the-attack">Understanding the Attack</h2>
+<p>On Mar 29, 2024 at 12:00PM ET, Andres Freund <a href="https://www.openwall.com/lists/oss-security/2024/03/29/4" target="_blank" rel="noopener noreffer">posted</a>
+on the Openwall mailing list about a backdoor he discovered in the <a href="https://github.com/tukaani-project/xz" target="_blank" rel="noopener noreffer"><em>XZ Utils</em></a>
+package. The backdoor targeted the <a href="https://www.openssh.com/" target="_blank" rel="noopener noreffer">OpenSSH</a>
+ binary, allowing remote code execution on impacted machines. This backdoor was not located in the GitHub repository, but only in release versions of the package, which hid its presence.</p>
+<p>Due to the reason XZ Utils had been installed (directly or indirectly) on billions of Linux systems worldwide, this discovery shocked the international Linux and infosec communities.</p>
+<h2 id="understanding-the-timeline-of-the-attack">Understanding the timeline of the attack</h2>
+<p>In late 2021, &ldquo;Jia Tan&rdquo;, an online identity, began a long and careful supply-chain attack with the goal of inserting a backdoor into Linux systems. Jia Tan submitted multiple contribution requests to several projects, including the XZ Utils project, and began harrasing Lasse Collin and other open source maintainers through various <a href="https://research.swtch.com/xz-timeline#jia_tan_arrives_on_scene_with_supporting_cast" target="_blank" rel="noopener noreffer">sock puppet accounts</a>
+to get their XZ contributions accepted and ultimately, by late 2022, Jia Tan became a maintainer of the XZ project.</p>
+<p>During 2023 and early 2024, Jia Tan started making multiple changes to various open-source projects. This included <a href="https://github.com/google/oss-fuzz/pull/10667" target="_blank" rel="noopener noreffer">submitting a merge request</a>
+to <a href="https://github.com/google/oss-fuzz" target="_blank" rel="noopener noreffer">google/oss-fuzz</a>
+, which developers use to validate their code. Apparently, the goal of this update was to take ownership of the XZ Utils project and disable specific features in order to hide certain errors that could reveal the planned backdoor.</p>
+<p>Finally, in early 2024, Jia Tan released XZ Utils 5.6.0 as a tarball, which is the most common method of releasing software on GitHub. Specifically, they performed <a href="https://git.tukaani.org/?p=xz.git;a=commitdiff;h=cf44e4b7f5dfdbf8c78aef377c10f71e274f63c0" target="_blank" rel="noopener noreffer">two commits</a>
+ that added <a href="https://git.tukaani.org/?p=xz.git;a=commitdiff;h=6e636819e8f070330d835fce46289a3ff72a7b89" target="_blank" rel="noopener noreffer">&ldquo;test&rdquo; files</a>
+ that included the backdoor in the released version of the software. Since these were binary files, and not plain text, the &ldquo;test&rdquo; files were more obfuscated from the community.</p>
+<p>Following the release of version 5.6.0, Jia Tan rushed out a 5.6.1 release in an attempt to fix some failures that were occurring with the backdoor, with the hope of fixing them before they were spotted.</p>
+<blockquote>
+<p>In total, Jia Tan made at least <a href="https://git.tukaani.org/?p=xz.git;a=search;pg=0;s=Jia&#43;Tan;st=author" target="_blank" rel="noopener noreffer">450 commits</a>
+ to the XZ GitHub, beginning on June 10, 2022.</p>
+</blockquote>
+<p>Eventually, on March 29, 2024 at 12:00PM ET, <a href="https://www.openwall.com/lists/oss-security/2024/03/29/4" target="_blank" rel="noopener noreffer">Andres Freund</a>
+ noticed a delay in the operation of SSH when running unstable version of Debian. Without the discovery of this SSH delay and various <a href="https://valgrind.org/" target="_blank" rel="noopener noreffer"><em>valgrind</em></a>
+ test errors, the community may not have discovered this vulnerability until it had run its course, infecting untold thousands or millions of machines.</p>
+<p>Despite the discovery of this vulnerability, the community is still wrestling with the potential scale and ramifications of the attack.</p>
+<blockquote>
+<p>Russ Cox presented an excellent <a href="https://research.swtch.com/xz-timeline" target="_blank" rel="noopener noreffer">detailed timeline</a>
+ of this attack, and @rheaeve posted an informative <a href="https://rheaeve.substack.com/p/xz-backdoor-times-damned-times-and" target="_blank" rel="noopener noreffer">timezone investigation</a>
+, both of which served as outstanding community resources.</p>
+</blockquote>
+<h2 id="grasping-the-technical-overview-of-the-attack">Grasping the Technical Overview of the Attack</h2>
+<p>To summarize, the widely-used XZ utils package, which contains the xz and the <em>liblzma</em> library, contained the obfuscated code that <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-3094" target="_blank" rel="noopener noreffer">created a backdoor</a>
+ in the OpenSSH service on many linux systems using XZ utils versions (5.6.0 -&gt; 5.6.1). This supply-chain attack was executed over trust-buildng campaign spanning two years🤯.</p>
+<p>From a technical standpoint, the backdoor was created when the tarball was generated for release tag. In other words, the backdoor was not created if the user built the tool manually from it&rsquo;s git repo.</p>
+<p>Thus, it is safe to assume the attacker was mainly targetting Debian and RPM-based systems which depend on this tarball for their package installers. Alternatively, systems that do not rely on this method of packaging, such as Arch Linux, were not impacted by this vulnerability. I love arch btw💘😉.</p>
+<h2 id="assessing-the-potential-impact-of-the-attack">Assessing the Potential Impact of the Attack</h2>
+<p>What makes this tremendously dangerous and attractive for such sophisticated attacks is that XZ utils is widely used over 3 billion machines, lightweight, easy to use and widely available.</p>
+<p>Given the widespead usage of this package, this attack could have impacted the security of linux systems worldwide, specially those that are running OpenSSH. The impact of this would have been devastating. Put simply, it&rsquo;s possible that this vulnerability could have granted Jia Tan and his allies or sponsors open access to every affected internet facing SSH server, globally, including those run by governments and high profile global entities.</p>
+<p>This attack had the potential to weaken the global linux security posture and could have triggered untold millions of dollars in damages, or worse, it could have affected global infrastucture or even the health and safety of countless citizens.</p>
+<h2 id="learning-from-the-incident">Learning from the incident</h2>
+<p>Let&rsquo;s review some of the potential lessons that we can learn from this incident.</p>
+<p>First, this high-profile attack has raised concerns about the security and trustworthiness of the open-source projects. At the same time, the open-source process of testing and collective effort worked in this case, as the vulnerability was discovered before it getting pushed from unstable to stable distributions.</p>
+<p>In addition, the discovery of this sophisticaed attack raises questions regarding the safety of other open-source projects that may have already been struck with a similar fate.</p>
+<p>This incident has highlighted the fact that solo open-source developers of high-profile projects are often overwhelmed. We cant simply completely rely on one person to do everything. We have to ensure that developers, maintainers and contributors are trustworthy.</p>
+<p>We also need to develop tools, techniques and procedures tha tensure the validity and the safety of our code, especially binary objects and their components.</p>
+<p>Finally, we must develop and implement tools, techniques and procedures that help detect not only supply-chain attacks but also the systems affected by these attacks in the event of breach.</p>
+<h2 id="testing-lab">Testing Lab</h2>
+<p>In this lab, I will be deploying two machines, <strong>Kali</strong>(backdoored package installed) and <strong>Debian</strong>(clean package). The Debian machine will serve as a baseline as we discuss the behavioral analysis that led to the discovery of this backdoor.</p>
+<p>First I will add two entries to the hosts file in our VM machines.<figure><img src="/xzbackdoor/i2.png"><figcaption>
+      <h4>Modified hosts file</h4>
+    </figcaption>
+</figure>
+</p>
+<p>Here as you can see we have the backdoored version of the package to install on kali VM. It can be obtained from the Debian package snapshots. <figure><img src="/xzbackdoor/i1.png"><figcaption>
+      <h4>Kali VM malicious XZ Package</h4>
+    </figcaption>
+</figure>
+</p>
+<p>After getting the vulnerable package, it&rsquo;s time to instasll it with</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt-get install -y --allow-downgrades  ./liblzma5_5.6.1-1_amd64.deb
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>then we need to reload static library object of the vulnerable version with</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl restart ssh
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>now our kali machine is vulnerable to <em>CVE-2024-3094</em>. Let&rsquo;s check it out.</p>
+<p>First, let&rsquo;s detect if this version of <em>liblzma</em> contains the backdoor. We&rsquo;ll use Vegard Nossom&rsquo;s script, <strong>detect.sh</strong> which was provided in the  <a href="https://www.openwall.com/lists/oss-security/2024/03/29/4" target="_blank" rel="noopener noreffer">disclosure</a>
+. The script is already located in the home directory. Let&rsquo;s use <strong>cat</strong> to view the script and analyze it.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">┌──<span class="o">(</span>abdo💀rog<span class="o">)</span>-<span class="o">[</span>~/Downloads<span class="o">]</span>
+</span></span><span class="line"><span class="cl">└─$ cat detect.sh 
+</span></span><span class="line"><span class="cl"><span class="c1">#! /bin/bash</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> -eu
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># find path to liblzma used by sshd</span>
+</span></span><span class="line"><span class="cl"><span class="nv">path</span><span class="o">=</span><span class="s2">&#34;</span><span class="k">$(</span>ldd <span class="k">$(</span>which sshd<span class="k">)</span> <span class="p">|</span> grep liblzma <span class="p">|</span> grep -o <span class="s1">&#39;/[^ ]*&#39;</span><span class="k">)</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># does it even exist?</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$path</span><span class="s2">&#34;</span> <span class="o">==</span> <span class="s2">&#34;&#34;</span> <span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="k">then</span>
+</span></span><span class="line"><span class="cl">	<span class="nb">echo</span> probably not vulnerable
+</span></span><span class="line"><span class="cl">	<span class="nb">exit</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># check for function signature</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> hexdump -ve <span class="s1">&#39;1/1 &#34;%.2x&#34;&#39;</span> <span class="s2">&#34;</span><span class="nv">$path</span><span class="s2">&#34;</span> <span class="p">|</span> grep -q f30f1efa554889f54c89ce5389fb81e7000000804883ec28488954241848894c2410
+</span></span><span class="line"><span class="cl"><span class="k">then</span>
+</span></span><span class="line"><span class="cl">	<span class="nb">echo</span> probably vulnerable
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">	<span class="nb">echo</span> probably not vulnerable
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>The script uses <em>ldd</em> to list the shared libraries loaded by the <em>sshd</em> binary and then searches for <em>liblzma</em>_ to determine its path.</p>
+<p>Then, the command <code>hexdump -ve '1/1 &quot;%.2x&quot;' &lt;&lt;file&gt;&gt;</code> will dump the <em>sshd</em> binary in hexadecimal form, without any formatting, producing a long hex string. The script then searches for a hexadecimal pattern that serves as a signature for the backdoor.</p>
+<p>As a result, if the script finds the signature, our binary has been backdoored.</p>
+<p>Let&rsquo;s run the script on the <em>kali-backdoor</em> machine first.</p>
+<figure><img src="/xzbackdoor/i3.png"><figcaption>
+      <h4>Script showing the package is vulnerable</h4>
+    </figcaption>
+</figure>
+
+<p>In the next section, we&rsquo;ll use behavioral anlysis to identify this backdoor without needing to log into the servers.</p>
+<h2 id="confirm-that-the-ssh-daemon-is-slower-than-usual">Confirm that the SSH Daemon is Slower than Usual</h2>
+<p>This vulnerability was discovered because of a small delay in the SSH rseponse time caused by peaks of CPU usage consumed by the sshd service. This anomaly remained unnoticed until Andres Freund ran a benchmark.</p>
+<p>Let&rsquo;s check this in our small lab. We&rsquo;ll SSH into both machines and compare their behaviors.
+<figure><img src="/xzbackdoor/i4.png"><figcaption>
+      <h4>Showing the difference in timing between SSH</h4>
+    </figcaption>
+</figure>
+</p>
+<p>Both commands produced a &ldquo;Permission denied&rdquo; error message. This is expected since we didn&rsquo;t submit valid authentication keys. However, the output of the <strong>time</strong> command, specifically the <em>real</em> value, reveals the time it took the command to present the error message.</p>
+<p>Although the real values may vary depending on many factors, the vulnerable machine clearly took longer to respond. We can repeat these exercise many times and each time, the backdoored machine will take longer to respond.</p>
+<p>This is exactly what Andres Freund noticed, which drove him to dive deeper in his investigation.</p>
+<p>We could write a custom scanner to test this, allowing us to remotely determine if a server has potentially been backdoored.</p>
+<p>Until next time cyaa&hellip;👋</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2024-04-09</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/xzbackdoor/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/backdoor/">Backdoor</a>,&nbsp;<a href="/tags/linux/">Linux</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/vimwithllm/" class="prev" rel="prev" title="VIM Editor &amp; Large Language Models"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>VIM Editor &amp; Large Language Models</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2023 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">DedSec</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

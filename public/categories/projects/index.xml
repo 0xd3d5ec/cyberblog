@@ -1,0 +1,38 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Projects - Category - D3d5ec</title>
+        <link>http://localhost:1313/categories/projects/</link>
+        <description>Projects - Category - D3d5ec</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>abdelaalatif253@gmail.com (DedSec)</managingEditor>
+            <webMaster>abdelaalatif253@gmail.com (DedSec)</webMaster><lastBuildDate>Sat, 16 Dec 2023 15:50:56 &#43;0300</lastBuildDate><atom:link href="http://localhost:1313/categories/projects/" rel="self" type="application/rss+xml" /><item>
+    <title>OPNsense Open-Source Firewall</title>
+    <link>http://localhost:1313/opensense/</link>
+    <pubDate>Sat, 16 Dec 2023 15:50:56 &#43;0300</pubDate>
+    <author>DedSec</author>
+    <guid>http://localhost:1313/opensense/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/opnsense.jpg" referrerpolicy="no-referrer">
+            </div>New project that discusses a firewall configuration for multiple purposes all free of cost.]]></description>
+</item>
+<item>
+    <title>Wazuh SIEM</title>
+    <link>http://localhost:1313/wazuh/</link>
+    <pubDate>Mon, 09 Oct 2023 13:41:11 &#43;0300</pubDate>
+    <author>DedSec</author>
+    <guid>http://localhost:1313/wazuh/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/wazuh.jpg" referrerpolicy="no-referrer">
+            </div>Wazuh SIEM, wolf to the rescue&hellip;wazooo!🐺]]></description>
+</item>
+<item>
+    <title>Password Generator</title>
+    <link>http://localhost:1313/passwordgen/</link>
+    <pubDate>Mon, 09 Oct 2023 00:55:58 &#43;0300</pubDate>
+    <author>DedSec</author>
+    <guid>http://localhost:1313/passwordgen/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/passgen.jpg" referrerpolicy="no-referrer">
+            </div>Believe it or not! making complex passwords is actually harder than memorizing them.🤯]]></description>
+</item>
+</channel>
+</rss>

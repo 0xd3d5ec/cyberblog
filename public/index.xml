@@ -1,0 +1,70 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>D3d5ec</title>
+        <link>http://localhost:1313/</link>
+        <description>Welcome to my cybersecurity blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>abdelaalatif253@gmail.com (DedSec)</managingEditor>
+            <webMaster>abdelaalatif253@gmail.com (DedSec)</webMaster><lastBuildDate>Mon, 08 Apr 2024 22:27:43 &#43;0300</lastBuildDate>
+            <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>CVE-2024-3094 - XZ Linux Backdoor Analysis</title>
+    <link>http://localhost:1313/xzbackdoor/</link>
+    <pubDate>Mon, 08 Apr 2024 22:27:43 &#43;0300</pubDate>
+    <author>DedSec</author>
+    <guid>http://localhost:1313/xzbackdoor/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/xz%20backdoor.png" referrerpolicy="no-referrer">
+            </div>XZ Linux Backdoor Analysis that affected millions of linux distributions]]></description>
+</item>
+<item>
+    <title>VIM Editor &amp; Large Language Models</title>
+    <link>http://localhost:1313/vimwithllm/</link>
+    <pubDate>Sat, 30 Mar 2024 06:18:17 &#43;0300</pubDate>
+    <author>DedSec</author>
+    <guid>http://localhost:1313/vimwithllm/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/vimwithllms.png" referrerpolicy="no-referrer">
+            </div>Generate efficiently within Vim editor Unique wordlists for Webapp Testing, Cracking and Bruteforcing with LLMs]]></description>
+</item>
+<item>
+    <title>OPNsense Open-Source Firewall</title>
+    <link>http://localhost:1313/opensense/</link>
+    <pubDate>Sat, 16 Dec 2023 15:50:56 &#43;0300</pubDate>
+    <author>DedSec</author>
+    <guid>http://localhost:1313/opensense/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/opnsense.jpg" referrerpolicy="no-referrer">
+            </div>New project that discusses a firewall configuration for multiple purposes all free of cost.]]></description>
+</item>
+<item>
+    <title>Wazuh SIEM</title>
+    <link>http://localhost:1313/wazuh/</link>
+    <pubDate>Mon, 09 Oct 2023 13:41:11 &#43;0300</pubDate>
+    <author>DedSec</author>
+    <guid>http://localhost:1313/wazuh/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/wazuh.jpg" referrerpolicy="no-referrer">
+            </div>Wazuh SIEM, wolf to the rescue&hellip;wazooo!🐺]]></description>
+</item>
+<item>
+    <title>Password Generator</title>
+    <link>http://localhost:1313/passwordgen/</link>
+    <pubDate>Mon, 09 Oct 2023 00:55:58 &#43;0300</pubDate>
+    <author>DedSec</author>
+    <guid>http://localhost:1313/passwordgen/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/passgen.jpg" referrerpolicy="no-referrer">
+            </div>Believe it or not! making complex passwords is actually harder than memorizing them.🤯]]></description>
+</item>
+<item>
+    <title>Cybertalents Scholarship</title>
+    <link>http://localhost:1313/cybertalents/</link>
+    <pubDate>Mon, 09 Oct 2023 00:42:52 &#43;0300</pubDate>
+    <author>DedSec</author>
+    <guid>http://localhost:1313/cybertalents/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/ct.jpg" referrerpolicy="no-referrer">
+            </div>Most sought after scholarship in arabic and african region, read my thrilling journey&hellip;🔥]]></description>
+</item>
+</channel>
+</rss>

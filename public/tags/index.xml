@@ -1,0 +1,88 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Tags - Tag - D3d5ec</title>
+        <link>http://localhost:1313/tags/</link>
+        <description>Tags - Tag - D3d5ec</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>abdelaalatif253@gmail.com (DedSec)</managingEditor>
+            <webMaster>abdelaalatif253@gmail.com (DedSec)</webMaster><lastBuildDate>Mon, 08 Apr 2024 22:27:43 &#43;0300</lastBuildDate><atom:link href="http://localhost:1313/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>Backdoor</title>
+    <link>http://localhost:1313/tags/backdoor/</link>
+    <pubDate>Mon, 08 Apr 2024 22:27:43 &#43;0300</pubDate>
+    <author>DedSec</author>
+    <guid>http://localhost:1313/tags/backdoor/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Linux</title>
+    <link>http://localhost:1313/tags/linux/</link>
+    <pubDate>Mon, 08 Apr 2024 22:27:43 &#43;0300</pubDate>
+    <author>DedSec</author>
+    <guid>http://localhost:1313/tags/linux/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Firewalls</title>
+    <link>http://localhost:1313/tags/firewalls/</link>
+    <pubDate>Sat, 16 Dec 2023 15:50:56 &#43;0300</pubDate>
+    <author>DedSec</author>
+    <guid>http://localhost:1313/tags/firewalls/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>IDS</title>
+    <link>http://localhost:1313/tags/ids/</link>
+    <pubDate>Sat, 16 Dec 2023 15:50:56 &#43;0300</pubDate>
+    <author>DedSec</author>
+    <guid>http://localhost:1313/tags/ids/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>IPS</title>
+    <link>http://localhost:1313/tags/ips/</link>
+    <pubDate>Sat, 16 Dec 2023 15:50:56 &#43;0300</pubDate>
+    <author>DedSec</author>
+    <guid>http://localhost:1313/tags/ips/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>WAF</title>
+    <link>http://localhost:1313/tags/waf/</link>
+    <pubDate>Sat, 16 Dec 2023 15:50:56 &#43;0300</pubDate>
+    <author>DedSec</author>
+    <guid>http://localhost:1313/tags/waf/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Blue Teaming</title>
+    <link>http://localhost:1313/tags/blue-teaming/</link>
+    <pubDate>Mon, 09 Oct 2023 13:41:11 &#43;0300</pubDate>
+    <author>DedSec</author>
+    <guid>http://localhost:1313/tags/blue-teaming/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Password Gen</title>
+    <link>http://localhost:1313/tags/password-gen/</link>
+    <pubDate>Mon, 09 Oct 2023 00:55:58 &#43;0300</pubDate>
+    <author>DedSec</author>
+    <guid>http://localhost:1313/tags/password-gen/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Python</title>
+    <link>http://localhost:1313/tags/python/</link>
+    <pubDate>Mon, 09 Oct 2023 00:55:58 &#43;0300</pubDate>
+    <author>DedSec</author>
+    <guid>http://localhost:1313/tags/python/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Scholarship</title>
+    <link>http://localhost:1313/tags/scholarship/</link>
+    <pubDate>Mon, 09 Oct 2023 00:42:52 &#43;0300</pubDate>
+    <author>DedSec</author>
+    <guid>http://localhost:1313/tags/scholarship/</guid>
+    <description><![CDATA[]]></description>
+</item>
+</channel>
+</rss>

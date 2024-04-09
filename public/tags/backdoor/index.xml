@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Backdoor - Tag - D3d5ec</title>
+        <link>http://localhost:1313/tags/backdoor/</link>
+        <description>Backdoor - Tag - D3d5ec</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>abdelaalatif253@gmail.com (DedSec)</managingEditor>
+            <webMaster>abdelaalatif253@gmail.com (DedSec)</webMaster><lastBuildDate>Mon, 08 Apr 2024 22:27:43 &#43;0300</lastBuildDate><atom:link href="http://localhost:1313/tags/backdoor/" rel="self" type="application/rss+xml" /><item>
+    <title>CVE-2024-3094 - XZ Linux Backdoor Analysis</title>
+    <link>http://localhost:1313/xzbackdoor/</link>
+    <pubDate>Mon, 08 Apr 2024 22:27:43 &#43;0300</pubDate>
+    <author>DedSec</author>
+    <guid>http://localhost:1313/xzbackdoor/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/xz%20backdoor.png" referrerpolicy="no-referrer">
+            </div>XZ Linux Backdoor Analysis that affected millions of linux distributions]]></description>
+</item>
+</channel>
+</rss>
