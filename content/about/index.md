@@ -8,7 +8,7 @@ tags = []
 categories = []
 draft = false
 +++
-{{< image src="inscope.png" height=400 width=800 linked=false alt="dumpster fire" >}}
+{{< image src="inscope.png" height=400 width=800 linked=false alt="dumpster firee" >}}
 
 {{< typeit code=bash group=me >}}
 abdo💀aboutme# whoami 
