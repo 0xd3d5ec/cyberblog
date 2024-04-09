@@ -1,4 +1,4 @@
-# Wazuh SIEM
+# Wazuh SIEM & XDR
 
 
 ## Background story first

@@ -1,6 +1,6 @@
 +++
-title = 'Wazuh SIEM'
-subtitle = 'Wazuh SIEM the free open source hero.'
+title = 'Wazuh SIEM & XDR'
+subtitle = 'Wazuh SIEM & XDR is the free open source hero.'
 date = 2023-10-09T13:41:11+03:00
 featuredImage = 'wazuh.jpg'
 featuredImagePreview = 'wazuh.jpg'
