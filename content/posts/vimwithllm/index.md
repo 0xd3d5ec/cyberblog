@@ -7,5 +7,5 @@ featuredImagePreview = 'vimwithllms.png'
 summary = 'Generate efficiently within Vim editor Unique wordlists for Webapp Testing, Cracking and Bruteforcing with LLMs'
 tags = []
 categories = []
-draft = false
+draft = true
 +++

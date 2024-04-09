@@ -2,11 +2,11 @@
 title = 'Password Generator'
 subtitle = 'Making good passwords is harder than memorizing them.'
 date = 2023-10-09T00:55:58+03:00
-featuredImage = 'passgen.jpg'
-featuredImagePreview = 'passgen.jpg'
+featuredImage = 'passgen.png'
+featuredImagePreview = 'passgen.png'
 summary = 'Believe it or not! making complex passwords is actually harder than memorizing them.🤯'
-tags = ["python", "password gen"]
-categories = ["code", "projects"]
+tags = ["Python", "Password"]
+categories = ["Code", "Projects"]
 draft = false
 +++
 

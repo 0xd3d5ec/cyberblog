@@ -4,7 +4,7 @@ baseURL = "http://example.org/"
 theme = "LoveIt"
 
 # website title
-title = "D3d5ec"
+title = "w01v3r's cyber dungeon"
 
 # language code ["en", "zh-CN", "fr", "pl", ...]
 languageCode = "en"
@@ -32,8 +32,8 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
 
 # Author config
 [author]
-  name = "DedSec"
-  email = "abdelaalatif253@gmail.com"
+  name = "w01v3r"
+  email = "abdu_majeed1401@protonmail.com"
   link = ""
 
 # Menu config
@@ -100,9 +100,9 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     #  Header title config
     [params.header.title]
       # URL of the LOGO
-      logo = "/static/images/DedSec.jpg"
+      logo = "/images/w01v3r.png"
       # title name
-      name = "Cyber Blog"
+      name = "Threatscape Vault"
       # you can add extra information before the name (HTML format is supported), such as icons
       pre = ""
       # you can add extra information after the name (HTML format is supported), such as icons
@@ -149,11 +149,11 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   #  App icon config
   [params.app]
     # optional site title override for the app when added to an iOS home screen or Android launcher
-    title = "D3d5ec cyber blog"
+    title = "w01v3r's cyber dungeon"
     # whether to omit favicon resource links
     noFavicon = false
     # modern SVG favicon to use in place of older style .png and .ico files
-    svgFavicon = ""
+    svgFavicon = "/images/fav.png"
     # Android browser theme color
     themeColor = "#ffffff"
     # Safari mask icon color
@@ -169,7 +169,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     # max index length of the chunked content
     contentLength = 4000
     # placeholder of the search bar
-    placeholder = ""
+    placeholder = "Search content..."
     #  max number of results length
     maxResultLength = 10
     #  snippet length of the result
@@ -193,7 +193,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       # Gravatar Email for preferred avatar in home page
       gravatarEmail = ""
       # URL of avatar shown in home page
-      avatarURL = "/static/images/me.jpg"
+      avatarURL = "/images/me.jpg"
       #  title shown in home page (HTML format is supported)
       title = ""
       # subtitle shown in home page (HTML format is supported)
@@ -288,7 +288,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     HackTheBox = ""
     RootMe= ""
     Phone = ""
-    Email = "abdelaalatif253@gmail.com"
+    Email = "abdu_majeed1401@gmail.com"
     RSS = true # 
 
   #  Page global config

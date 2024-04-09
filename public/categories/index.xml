@@ -1,22 +1,22 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Categories - Category - D3d5ec</title>
+        <title>Categories - Category - w01v3r&#39;s cyber dungeon</title>
         <link>http://example.org/categories/</link>
-        <description>Categories - Category - D3d5ec</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>abdelaalatif253@gmail.com (DedSec)</managingEditor>
-            <webMaster>abdelaalatif253@gmail.com (DedSec)</webMaster><lastBuildDate>Mon, 08 Apr 2024 22:27:43 &#43;0300</lastBuildDate><atom:link href="http://example.org/categories/" rel="self" type="application/rss+xml" /><item>
+        <description>Categories - Category - w01v3r&#39;s cyber dungeon</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>abdu_majeed1401@protonmail.com (w01v3r)</managingEditor>
+            <webMaster>abdu_majeed1401@protonmail.com (w01v3r)</webMaster><lastBuildDate>Mon, 08 Apr 2024 22:27:43 &#43;0300</lastBuildDate><atom:link href="http://example.org/categories/" rel="self" type="application/rss+xml" /><item>
     <title>Red Team</title>
     <link>http://example.org/categories/red-team/</link>
     <pubDate>Mon, 08 Apr 2024 22:27:43 &#43;0300</pubDate>
-    <author>DedSec</author>
+    <author>w01v3r</author>
     <guid>http://example.org/categories/red-team/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Projects</title>
     <link>http://example.org/categories/projects/</link>
-    <pubDate>Sat, 16 Dec 2023 15:50:56 &#43;0300</pubDate>
-    <author>DedSec</author>
+    <pubDate>Mon, 09 Oct 2023 13:41:11 &#43;0300</pubDate>
+    <author>w01v3r</author>
     <guid>http://example.org/categories/projects/</guid>
     <description><![CDATA[]]></description>
 </item>
@@ -24,7 +24,7 @@
     <title>Siem</title>
     <link>http://example.org/categories/siem/</link>
     <pubDate>Mon, 09 Oct 2023 13:41:11 &#43;0300</pubDate>
-    <author>DedSec</author>
+    <author>w01v3r</author>
     <guid>http://example.org/categories/siem/</guid>
     <description><![CDATA[]]></description>
 </item>
@@ -32,7 +32,7 @@
     <title>Code</title>
     <link>http://example.org/categories/code/</link>
     <pubDate>Mon, 09 Oct 2023 00:55:58 &#43;0300</pubDate>
-    <author>DedSec</author>
+    <author>w01v3r</author>
     <guid>http://example.org/categories/code/</guid>
     <description><![CDATA[]]></description>
 </item>
@@ -40,7 +40,7 @@
     <title>Stories</title>
     <link>http://example.org/categories/stories/</link>
     <pubDate>Mon, 09 Oct 2023 00:42:52 &#43;0300</pubDate>
-    <author>DedSec</author>
+    <author>w01v3r</author>
     <guid>http://example.org/categories/stories/</guid>
     <description><![CDATA[]]></description>
 </item>

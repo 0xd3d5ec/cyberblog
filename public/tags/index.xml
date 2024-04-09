@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Tags - Tag - D3d5ec</title>
+        <title>Tags - Tag - w01v3r&#39;s cyber dungeon</title>
         <link>http://example.org/tags/</link>
-        <description>Tags - Tag - D3d5ec</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>abdelaalatif253@gmail.com (DedSec)</managingEditor>
-            <webMaster>abdelaalatif253@gmail.com (DedSec)</webMaster><lastBuildDate>Mon, 08 Apr 2024 22:27:43 &#43;0300</lastBuildDate><atom:link href="http://example.org/tags/" rel="self" type="application/rss+xml" /><item>
+        <description>Tags - Tag - w01v3r&#39;s cyber dungeon</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>abdu_majeed1401@protonmail.com (w01v3r)</managingEditor>
+            <webMaster>abdu_majeed1401@protonmail.com (w01v3r)</webMaster><lastBuildDate>Mon, 08 Apr 2024 22:27:43 &#43;0300</lastBuildDate><atom:link href="http://example.org/tags/" rel="self" type="application/rss+xml" /><item>
     <title>Backdoor</title>
     <link>http://example.org/tags/backdoor/</link>
     <pubDate>Mon, 08 Apr 2024 22:27:43 &#43;0300</pubDate>
-    <author>DedSec</author>
+    <author>w01v3r</author>
     <guid>http://example.org/tags/backdoor/</guid>
     <description><![CDATA[]]></description>
 </item>
@@ -16,63 +16,31 @@
     <title>Linux</title>
     <link>http://example.org/tags/linux/</link>
     <pubDate>Mon, 08 Apr 2024 22:27:43 &#43;0300</pubDate>
-    <author>DedSec</author>
+    <author>w01v3r</author>
     <guid>http://example.org/tags/linux/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Firewalls</title>
-    <link>http://example.org/tags/firewalls/</link>
-    <pubDate>Sat, 16 Dec 2023 15:50:56 &#43;0300</pubDate>
-    <author>DedSec</author>
-    <guid>http://example.org/tags/firewalls/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>IDS</title>
-    <link>http://example.org/tags/ids/</link>
-    <pubDate>Sat, 16 Dec 2023 15:50:56 &#43;0300</pubDate>
-    <author>DedSec</author>
-    <guid>http://example.org/tags/ids/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>IPS</title>
-    <link>http://example.org/tags/ips/</link>
-    <pubDate>Sat, 16 Dec 2023 15:50:56 &#43;0300</pubDate>
-    <author>DedSec</author>
-    <guid>http://example.org/tags/ips/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>WAF</title>
-    <link>http://example.org/tags/waf/</link>
-    <pubDate>Sat, 16 Dec 2023 15:50:56 &#43;0300</pubDate>
-    <author>DedSec</author>
-    <guid>http://example.org/tags/waf/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Blue Teaming</title>
     <link>http://example.org/tags/blue-teaming/</link>
     <pubDate>Mon, 09 Oct 2023 13:41:11 &#43;0300</pubDate>
-    <author>DedSec</author>
+    <author>w01v3r</author>
     <guid>http://example.org/tags/blue-teaming/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>Password Gen</title>
-    <link>http://example.org/tags/password-gen/</link>
+    <title>Password</title>
+    <link>http://example.org/tags/password/</link>
     <pubDate>Mon, 09 Oct 2023 00:55:58 &#43;0300</pubDate>
-    <author>DedSec</author>
-    <guid>http://example.org/tags/password-gen/</guid>
+    <author>w01v3r</author>
+    <guid>http://example.org/tags/password/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Python</title>
     <link>http://example.org/tags/python/</link>
     <pubDate>Mon, 09 Oct 2023 00:55:58 &#43;0300</pubDate>
-    <author>DedSec</author>
+    <author>w01v3r</author>
     <guid>http://example.org/tags/python/</guid>
     <description><![CDATA[]]></description>
 </item>
@@ -80,7 +48,7 @@
     <title>Scholarship</title>
     <link>http://example.org/tags/scholarship/</link>
     <pubDate>Mon, 09 Oct 2023 00:42:52 &#43;0300</pubDate>
-    <author>DedSec</author>
+    <author>w01v3r</author>
     <guid>http://example.org/tags/scholarship/</guid>
     <description><![CDATA[]]></description>
 </item>

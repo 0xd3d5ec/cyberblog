@@ -131,4 +131,4 @@ This is exactly what Andres Freund noticed, which drove him to dive deeper in hi
 
 We could write a custom scanner to test this, allowing us to remotely determine if a server has potentially been backdoored.
 
-Until next time cyaa...👋
+Until next time cyaa.👋

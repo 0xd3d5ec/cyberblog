@@ -2,11 +2,11 @@
 title = 'Cybertalents Scholarship'
 subtitle = 'A digital cyber chase of the dream.'
 date = 2023-10-09T00:42:52+03:00
-featuredImage = 'ct.jpg'
-featuredImagePreview = 'ct.jpg'
+featuredImage = 'cybertalents.png'
+featuredImagePreview = 'cybertalents.png'
 summary = 'Most sought after scholarship in arabic and african region, read my thrilling journey...🔥'
-tags = ["scholarship"]
-categories = ["stories"]
+tags = ["Scholarship"]
+categories = ["Stories"]
 draft = false
 +++
 

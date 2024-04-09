@@ -7,7 +7,7 @@ featuredImagePreview = 'opnsense.jpg'
 summary = 'New project that discusses a firewall configuration for multiple purposes all free of cost.'
 tags = ['firewalls','WAF','IPS','IDS']
 categories = ['projects']
-draft = false
+draft = true
 +++
 
 ## Why OPNsense?
