@@ -1,6 +1,6 @@
 # 
 
-{{< image src="inscope.png" height=400 width=800 linked=false alt='' >}}
+{{< image src="inscope.png" height=400 width=800 linked=false alt="dumpster fire" >}}
 
 {{< typeit code=bash group=me >}}
 abdo💀aboutme# whoami 
