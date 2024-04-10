@@ -1,17 +1,17 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Red Team - Category - w01v3r&#39;s cyber dungeon</title>
-        <link>http://localhost:1313/categories/red-team/</link>
+        <link>http://localhost:1313/cyberblog/categories/red-team/</link>
         <description>Red Team - Category - w01v3r&#39;s cyber dungeon</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>abdu_majeed1401@protonmail.com (w01v3r)</managingEditor>
-            <webMaster>abdu_majeed1401@protonmail.com (w01v3r)</webMaster><lastBuildDate>Mon, 08 Apr 2024 22:27:43 &#43;0300</lastBuildDate><atom:link href="http://localhost:1313/categories/red-team/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>abdu_majeed1401@protonmail.com (w01v3r)</webMaster><lastBuildDate>Mon, 08 Apr 2024 22:27:43 &#43;0300</lastBuildDate><atom:link href="http://localhost:1313/cyberblog/categories/red-team/" rel="self" type="application/rss+xml" /><item>
     <title>CVE-2024-3094 - XZ Linux Backdoor Analysis</title>
-    <link>http://localhost:1313/xzbackdoor/</link>
+    <link>http://localhost:1313/cyberblog/xzbackdoor/</link>
     <pubDate>Mon, 08 Apr 2024 22:27:43 &#43;0300</pubDate>
     <author>w01v3r</author>
-    <guid>http://localhost:1313/xzbackdoor/</guid>
+    <guid>http://localhost:1313/cyberblog/xzbackdoor/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="/xz%20backdoor.png" referrerpolicy="no-referrer">
+                <img src="/cyberblog/xz%20backdoor.png" referrerpolicy="no-referrer">
             </div>XZ Linux Backdoor Analysis that affected millions of linux distributions]]></description>
 </item>
 </channel>
