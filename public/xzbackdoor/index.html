@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <title>CVE-2024-3094 - XZ Linux Backdoor Analysis - w01v3r&#39;s cyber dungeon</title><meta name="Description" content="Welcome to my cybersecurity blog"><meta property="og:title" content="CVE-2024-3094 - XZ Linux Backdoor Analysis" />
 <meta property="og:description" content="XZ Linux Backdoor Analysis that affected millions of linux distributions" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://example.org/xzbackdoor/" /><meta property="og:image" content="http://example.org/logo.png" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="http://localhost:1313/xzbackdoor/" /><meta property="og:image" content="http://localhost:1313/logo.png" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2024-04-08T22:27:43+03:00" />
 <meta property="article:modified_time" content="2024-04-10T01:31:09+03:00" /><meta property="og:site_name" content="My cool site" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="http://example.org/logo.png" /><meta name="twitter:title" content="CVE-2024-3094 - XZ Linux Backdoor Analysis"/>
+<meta name="twitter:image" content="http://localhost:1313/logo.png" /><meta name="twitter:title" content="CVE-2024-3094 - XZ Linux Backdoor Analysis"/>
 <meta name="twitter:description" content="XZ Linux Backdoor Analysis that affected millions of linux distributions"/>
 <meta name="application-name" content="w01v3r&#39;s cyber dungeon">
-<meta name="apple-mobile-web-app-title" content="w01v3r&#39;s cyber dungeon"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/fav.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/xzbackdoor/" /><link rel="prev" href="http://example.org/wazuh/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<meta name="apple-mobile-web-app-title" content="w01v3r&#39;s cyber dungeon"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/fav.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/xzbackdoor/" /><link rel="prev" href="http://localhost:1313/vimwithllm/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -22,9 +22,9 @@
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "http:\/\/example.org\/xzbackdoor\/"
+            "@id": "http:\/\/localhost:1313\/xzbackdoor\/"
         },"genre": "posts","keywords": "backdoor, linux","wordcount":  1629 ,
-        "url": "http:\/\/example.org\/xzbackdoor\/","datePublished": "2024-04-08T22:27:43+03:00","dateModified": "2024-04-10T01:31:09+03:00","publisher": {
+        "url": "http:\/\/localhost:1313\/xzbackdoor\/","datePublished": "2024-04-08T22:27:43+03:00","dateModified": "2024-04-10T01:31:09+03:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -40,11 +40,11 @@
             <a href="/" title="w01v3r&#39;s cyber dungeon"><img
         class="lazyload logo"
         src="/svg/loading.min.svg"
-        data-src="/images/w01v3r.png"
-        data-srcset="/images/w01v3r.png, /images/w01v3r.png 1.5x, /images/w01v3r.png 2x"
+        data-src="/w01v3r.png"
+        data-srcset="/w01v3r.png, /w01v3r.png 1.5x, /w01v3r.png 2x"
         data-sizes="auto"
-        alt="/images/w01v3r.png"
-        title="/images/w01v3r.png" />Threatscape Vault</a>
+        alt="/w01v3r.png"
+        title="/w01v3r.png" />Threatscape Vault</a>
         </div>
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/about/"> About Me </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
@@ -71,11 +71,11 @@
                 <a href="/" title="w01v3r&#39;s cyber dungeon"><img
         class="lazyload logo"
         src="/svg/loading.min.svg"
-        data-src="/images/w01v3r.png"
-        data-srcset="/images/w01v3r.png, /images/w01v3r.png 1.5x, /images/w01v3r.png 2x"
+        data-src="/w01v3r.png"
+        data-srcset="/w01v3r.png, /w01v3r.png 1.5x, /w01v3r.png 2x"
         data-sizes="auto"
-        alt="/images/w01v3r.png"
-        title="/images/w01v3r.png" />Threatscape Vault</a>
+        alt="/w01v3r.png"
+        title="/w01v3r.png" />Threatscape Vault</a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
@@ -320,7 +320,7 @@ to <a href="https://github.com/google/oss-fuzz" target="_blank" rel="noopener n
         </section>
     </div>
 
-    <div class="post-nav"><a href="/wazuh/" class="prev" rel="prev" title="Wazuh SIEM &amp; XDR"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Wazuh SIEM &amp; XDR</a></div>
+    <div class="post-nav"><a href="/vimwithllm/" class="prev" rel="prev" title="VIM Editor &amp; Large Language Models"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>VIM Editor &amp; Large Language Models</a></div>
 </div>
 </article></div>
             </main><footer class="footer">
