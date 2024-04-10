@@ -1,55 +1,55 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Tags - Tag - w01v3r&#39;s cyber dungeon</title>
-        <link>https://0xd3d5ec.github.io/cyberblog/tags/</link>
+        <link>https://0xd3d5ec.github.io/cyberblog/img/tags/</link>
         <description>Tags - Tag - w01v3r&#39;s cyber dungeon</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>abdu_majeed1401@protonmail.com (w01v3r)</managingEditor>
-            <webMaster>abdu_majeed1401@protonmail.com (w01v3r)</webMaster><lastBuildDate>Mon, 08 Apr 2024 22:27:43 &#43;0300</lastBuildDate><atom:link href="https://0xd3d5ec.github.io/cyberblog/tags/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>abdu_majeed1401@protonmail.com (w01v3r)</webMaster><lastBuildDate>Mon, 08 Apr 2024 22:27:43 &#43;0300</lastBuildDate><atom:link href="https://0xd3d5ec.github.io/cyberblog/img/tags/" rel="self" type="application/rss+xml" /><item>
     <title>Backdoor</title>
-    <link>https://0xd3d5ec.github.io/cyberblog/tags/backdoor/</link>
+    <link>https://0xd3d5ec.github.io/cyberblog/img/tags/backdoor/</link>
     <pubDate>Mon, 08 Apr 2024 22:27:43 &#43;0300</pubDate>
     <author>w01v3r</author>
-    <guid>https://0xd3d5ec.github.io/cyberblog/tags/backdoor/</guid>
+    <guid>https://0xd3d5ec.github.io/cyberblog/img/tags/backdoor/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Linux</title>
-    <link>https://0xd3d5ec.github.io/cyberblog/tags/linux/</link>
+    <link>https://0xd3d5ec.github.io/cyberblog/img/tags/linux/</link>
     <pubDate>Mon, 08 Apr 2024 22:27:43 &#43;0300</pubDate>
     <author>w01v3r</author>
-    <guid>https://0xd3d5ec.github.io/cyberblog/tags/linux/</guid>
+    <guid>https://0xd3d5ec.github.io/cyberblog/img/tags/linux/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Blue Teaming</title>
-    <link>https://0xd3d5ec.github.io/cyberblog/tags/blue-teaming/</link>
+    <link>https://0xd3d5ec.github.io/cyberblog/img/tags/blue-teaming/</link>
     <pubDate>Mon, 09 Oct 2023 13:41:11 &#43;0300</pubDate>
     <author>w01v3r</author>
-    <guid>https://0xd3d5ec.github.io/cyberblog/tags/blue-teaming/</guid>
+    <guid>https://0xd3d5ec.github.io/cyberblog/img/tags/blue-teaming/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Password</title>
-    <link>https://0xd3d5ec.github.io/cyberblog/tags/password/</link>
+    <link>https://0xd3d5ec.github.io/cyberblog/img/tags/password/</link>
     <pubDate>Mon, 09 Oct 2023 00:55:58 &#43;0300</pubDate>
     <author>w01v3r</author>
-    <guid>https://0xd3d5ec.github.io/cyberblog/tags/password/</guid>
+    <guid>https://0xd3d5ec.github.io/cyberblog/img/tags/password/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Python</title>
-    <link>https://0xd3d5ec.github.io/cyberblog/tags/python/</link>
+    <link>https://0xd3d5ec.github.io/cyberblog/img/tags/python/</link>
     <pubDate>Mon, 09 Oct 2023 00:55:58 &#43;0300</pubDate>
     <author>w01v3r</author>
-    <guid>https://0xd3d5ec.github.io/cyberblog/tags/python/</guid>
+    <guid>https://0xd3d5ec.github.io/cyberblog/img/tags/python/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Scholarship</title>
-    <link>https://0xd3d5ec.github.io/cyberblog/tags/scholarship/</link>
+    <link>https://0xd3d5ec.github.io/cyberblog/img/tags/scholarship/</link>
     <pubDate>Mon, 09 Oct 2023 00:42:52 &#43;0300</pubDate>
     <author>w01v3r</author>
-    <guid>https://0xd3d5ec.github.io/cyberblog/tags/scholarship/</guid>
+    <guid>https://0xd3d5ec.github.io/cyberblog/img/tags/scholarship/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>

@@ -1,47 +1,47 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Categories - Category - w01v3r&#39;s cyber dungeon</title>
-        <link>https://0xd3d5ec.github.io/cyberblog/categories/</link>
+        <link>https://0xd3d5ec.github.io/cyberblog/img/categories/</link>
         <description>Categories - Category - w01v3r&#39;s cyber dungeon</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>abdu_majeed1401@protonmail.com (w01v3r)</managingEditor>
-            <webMaster>abdu_majeed1401@protonmail.com (w01v3r)</webMaster><lastBuildDate>Mon, 08 Apr 2024 22:27:43 &#43;0300</lastBuildDate><atom:link href="https://0xd3d5ec.github.io/cyberblog/categories/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>abdu_majeed1401@protonmail.com (w01v3r)</webMaster><lastBuildDate>Mon, 08 Apr 2024 22:27:43 &#43;0300</lastBuildDate><atom:link href="https://0xd3d5ec.github.io/cyberblog/img/categories/" rel="self" type="application/rss+xml" /><item>
     <title>Red Team</title>
-    <link>https://0xd3d5ec.github.io/cyberblog/categories/red-team/</link>
+    <link>https://0xd3d5ec.github.io/cyberblog/img/categories/red-team/</link>
     <pubDate>Mon, 08 Apr 2024 22:27:43 &#43;0300</pubDate>
     <author>w01v3r</author>
-    <guid>https://0xd3d5ec.github.io/cyberblog/categories/red-team/</guid>
+    <guid>https://0xd3d5ec.github.io/cyberblog/img/categories/red-team/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Projects</title>
-    <link>https://0xd3d5ec.github.io/cyberblog/categories/projects/</link>
+    <link>https://0xd3d5ec.github.io/cyberblog/img/categories/projects/</link>
     <pubDate>Mon, 09 Oct 2023 13:41:11 &#43;0300</pubDate>
     <author>w01v3r</author>
-    <guid>https://0xd3d5ec.github.io/cyberblog/categories/projects/</guid>
+    <guid>https://0xd3d5ec.github.io/cyberblog/img/categories/projects/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Siem</title>
-    <link>https://0xd3d5ec.github.io/cyberblog/categories/siem/</link>
+    <link>https://0xd3d5ec.github.io/cyberblog/img/categories/siem/</link>
     <pubDate>Mon, 09 Oct 2023 13:41:11 &#43;0300</pubDate>
     <author>w01v3r</author>
-    <guid>https://0xd3d5ec.github.io/cyberblog/categories/siem/</guid>
+    <guid>https://0xd3d5ec.github.io/cyberblog/img/categories/siem/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Code</title>
-    <link>https://0xd3d5ec.github.io/cyberblog/categories/code/</link>
+    <link>https://0xd3d5ec.github.io/cyberblog/img/categories/code/</link>
     <pubDate>Mon, 09 Oct 2023 00:55:58 &#43;0300</pubDate>
     <author>w01v3r</author>
-    <guid>https://0xd3d5ec.github.io/cyberblog/categories/code/</guid>
+    <guid>https://0xd3d5ec.github.io/cyberblog/img/categories/code/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Stories</title>
-    <link>https://0xd3d5ec.github.io/cyberblog/categories/stories/</link>
+    <link>https://0xd3d5ec.github.io/cyberblog/img/categories/stories/</link>
     <pubDate>Mon, 09 Oct 2023 00:42:52 &#43;0300</pubDate>
     <author>w01v3r</author>
-    <guid>https://0xd3d5ec.github.io/cyberblog/categories/stories/</guid>
+    <guid>https://0xd3d5ec.github.io/cyberblog/img/categories/stories/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>
