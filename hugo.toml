@@ -90,7 +90,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   # website description for RSS, SEO, Open Graph and Twitter Cards
   description = "Welcome to my cybersecurity blog"
   # website images for Open Graph and Twitter Cards
-  images = ["imgs/logo.png"]
+  images = [""]
 
   # Header config
   [params.header]
@@ -630,7 +630,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       # Publisher info
       [params.page.seo.publisher]
         name = "Threatscape Vault"
-        logoUrl = "/imgs/logo.png"
+        logoUrl = "/cyberblog/imgs/logo.png"
 
   #  TypeIt config
   [params.typeit]
