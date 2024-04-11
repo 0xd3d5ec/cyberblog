@@ -1,5 +1,5 @@
 +++
-title = 'About'
+title = ''
 subtitle = ''
 date = 2023-10-09T02:17:14+03:00
 featuredImage = ''
@@ -8,7 +8,7 @@ tags = []
 categories = []
 draft = false
 +++
-{{<image src="inscope.png" alt="boom">}}
+{{<image src="inscope.png" width="800" alt="boom">}}
 
 {{< typeit code=bash group=me >}}
 w01v3r💀aboutme# whoami 
