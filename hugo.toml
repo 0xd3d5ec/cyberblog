@@ -35,7 +35,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   name = "w01v3r"
   email = "abdu_majeed1401@protonmail.com"
   link = ""
-  avatar = "favicon-16x16.png"
+  avatar = "w01v3r.png"
 
 # Menu config
 [menu]
