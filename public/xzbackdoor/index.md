@@ -11,7 +11,7 @@ We&#39;ll explore the sequence of events leading up to the attack&#39;s discover
 Finally, I will wrap up with lessons learned, a detailed lab environment and the importance of vigilence and proactive security measures in the open-source ecosystem.
 
 ## Understanding the Attack
-On Mar 29, 2024 at 12:00PM ET, Andres Freund [posted](https://www.openwall.com/lists/oss-security/2024/03/29/4)on the Openwall mailing list about a backdoor he discovered in the [_XZ Utils_](https://github.com/tukaani-project/xz)package. The backdoor targeted the [OpenSSH](https://www.openssh.com/) binary, allowing remote code execution on impacted machines. This backdoor was not located in the GitHub repository, but only in release versions of the package, which hid its presence.
+On Mar 29, 2024 at 12:00PM ET, Andres Freund [posted](https://www.openwall.com/lists/oss-security/2024/03/29/4) on the Openwall mailing list about a backdoor he discovered in the [_XZ Utils_](https://github.com/tukaani-project/xz)package. The backdoor targeted the [OpenSSH](https://www.openssh.com/) binary, allowing remote code execution on impacted machines. This backdoor was not located in the GitHub repository, but only in release versions of the package, which hid its presence.
 
 Due to the reason XZ Utils had been installed (directly or indirectly) on billions of Linux systems worldwide, this discovery shocked the international Linux and infosec communities.
 
