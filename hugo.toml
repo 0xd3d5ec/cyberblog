@@ -35,7 +35,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   name = "w01v3r"
   email = "abdu_majeed1401@protonmail.com"
   link = ""
-  avatar = "/img/fav.png"
+  avatar = "fav.png"
 
 # Menu config
 [menu]
@@ -163,7 +163,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     # whether to omit favicon resource links
     noFavicon = false
     # modern SVG favicon to use in place of older style .png and .ico files
-    svgFavicon = "/img/fav.png"
+    svgFavicon = "/fav.png"
   [params.app.themeColor]
     light = "Ff0000"
     dark = "000000"
@@ -193,7 +193,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       # Gravatar Email for preferred avatar in home page
       gravatarEmail = ""
       # URL of avatar shown in home page
-      avatarURL = "/me.jpg"
+      avatarURL = "me.jpg"
       #  title shown in home page (HTML format is supported)
       title = ""
       # subtitle shown in home page (HTML format is supported)
@@ -203,7 +203,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       # whether to show social links
       social = true
       #  disclaimer (HTML format is supported)
-      disclaimer = "You can follow my RSS feed for updates."
+      #disclaimer = ""
     # Home page posts
     [params.home.posts]
       enable = true
