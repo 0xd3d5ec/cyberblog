@@ -136,5 +136,5 @@ Until next time cyaa.👋
 ---
 
 > Author: w01v3r  
-> URL: http://example.com/xzbackdoor/  
+> URL: https://0xd3d5ec.github.io/cyberblog/xzbackdoor/  
 

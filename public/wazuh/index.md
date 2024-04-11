@@ -55,5 +55,5 @@ We didnt discuss all it&#39;s feature set since this will take a lot of time and
 ---
 
 > Author: w01v3r  
-> URL: http://example.com/wazuh/  
+> URL: https://0xd3d5ec.github.io/cyberblog/wazuh/  
 

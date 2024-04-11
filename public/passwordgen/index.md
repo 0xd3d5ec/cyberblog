@@ -44,5 +44,5 @@ Hope this small program has peaked your interest to discover more and more impor
 ---
 
 > Author: w01v3r  
-> URL: http://example.com/passwordgen/  
+> URL: https://0xd3d5ec.github.io/cyberblog/passwordgen/  
 

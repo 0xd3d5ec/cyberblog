@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
     <title>Python - Tag - Threatscap Vault</title>
-    <link>http://example.com/tags/python/</link>
+    <link>https://0xd3d5ec.github.io/cyberblog/tags/python/</link>
     <description>Python - Tag | Threatscap Vault</description>
     <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>abdu_majeed1401@protonmail.com (w01v3r)</managingEditor>
-      <webMaster>abdu_majeed1401@protonmail.com (w01v3r)</webMaster><lastBuildDate>Mon, 09 Oct 2023 00:55:58 &#43;0300</lastBuildDate><atom:link href="http://example.com/tags/python/" rel="self" type="application/rss+xml" /><item>
+      <webMaster>abdu_majeed1401@protonmail.com (w01v3r)</webMaster><lastBuildDate>Mon, 09 Oct 2023 00:55:58 &#43;0300</lastBuildDate><atom:link href="https://0xd3d5ec.github.io/cyberblog/tags/python/" rel="self" type="application/rss+xml" /><item>
   <title>Password Generator</title>
-  <link>http://example.com/passwordgen/</link>
+  <link>https://0xd3d5ec.github.io/cyberblog/passwordgen/</link>
   <pubDate>Mon, 09 Oct 2023 00:55:58 &#43;0300</pubDate>
   <author>w01v3r</author>
-  <guid>http://example.com/passwordgen/</guid>
+  <guid>https://0xd3d5ec.github.io/cyberblog/passwordgen/</guid>
   <description><![CDATA[<div class="featured-image"><img loading="eager" src="passgen.png" alt="Password Generator" title="Password Generator" referrerpolicy="no-referrer"/></div>Believe it or not! making complex passwords is actually harder than memorizing them.🤯]]></description>
 </item>
 </channel>

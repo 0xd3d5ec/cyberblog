@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
     <title>Backdoor - Tag - Threatscap Vault</title>
-    <link>http://example.com/tags/backdoor/</link>
+    <link>https://0xd3d5ec.github.io/cyberblog/tags/backdoor/</link>
     <description>Backdoor - Tag | Threatscap Vault</description>
     <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>abdu_majeed1401@protonmail.com (w01v3r)</managingEditor>
-      <webMaster>abdu_majeed1401@protonmail.com (w01v3r)</webMaster><lastBuildDate>Mon, 08 Apr 2024 22:27:43 &#43;0300</lastBuildDate><atom:link href="http://example.com/tags/backdoor/" rel="self" type="application/rss+xml" /><item>
+      <webMaster>abdu_majeed1401@protonmail.com (w01v3r)</webMaster><lastBuildDate>Mon, 08 Apr 2024 22:27:43 &#43;0300</lastBuildDate><atom:link href="https://0xd3d5ec.github.io/cyberblog/tags/backdoor/" rel="self" type="application/rss+xml" /><item>
   <title>CVE-2024-3094 - XZ Linux Backdoor Analysis</title>
-  <link>http://example.com/xzbackdoor/</link>
+  <link>https://0xd3d5ec.github.io/cyberblog/xzbackdoor/</link>
   <pubDate>Mon, 08 Apr 2024 22:27:43 &#43;0300</pubDate>
   <author>w01v3r</author>
-  <guid>http://example.com/xzbackdoor/</guid>
+  <guid>https://0xd3d5ec.github.io/cyberblog/xzbackdoor/</guid>
   <description><![CDATA[<div class="featured-image"><img loading="eager" src="xz%20backdoor.png" alt="CVE-2024-3094 - XZ Linux Backdoor Analysis" title="CVE-2024-3094 - XZ Linux Backdoor Analysis" referrerpolicy="no-referrer"/></div>XZ Linux Backdoor Analysis that affected millions of linux distributions]]></description>
 </item>
 </channel>

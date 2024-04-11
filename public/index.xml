@@ -1,41 +1,41 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
     <title>Threatscap Vault</title>
-    <link>http://example.com/</link>
+    <link>https://0xd3d5ec.github.io/cyberblog/</link>
     <description>Welcome to my cybersecurity blog</description>
     <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>abdu_majeed1401@protonmail.com (w01v3r)</managingEditor>
       <webMaster>abdu_majeed1401@protonmail.com (w01v3r)</webMaster><lastBuildDate>Mon, 08 Apr 2024 22:27:43 &#43;0300</lastBuildDate>
-      <atom:link href="http://example.com/index.xml" rel="self" type="application/rss+xml" />
+      <atom:link href="https://0xd3d5ec.github.io/cyberblog/index.xml" rel="self" type="application/rss+xml" />
     <item>
   <title>CVE-2024-3094 - XZ Linux Backdoor Analysis</title>
-  <link>http://example.com/xzbackdoor/</link>
+  <link>https://0xd3d5ec.github.io/cyberblog/xzbackdoor/</link>
   <pubDate>Mon, 08 Apr 2024 22:27:43 &#43;0300</pubDate>
   <author>w01v3r</author>
-  <guid>http://example.com/xzbackdoor/</guid>
+  <guid>https://0xd3d5ec.github.io/cyberblog/xzbackdoor/</guid>
   <description><![CDATA[<div class="featured-image"><img loading="eager" src="xz%20backdoor.png" alt="CVE-2024-3094 - XZ Linux Backdoor Analysis" title="CVE-2024-3094 - XZ Linux Backdoor Analysis" referrerpolicy="no-referrer"/></div>XZ Linux Backdoor Analysis that affected millions of linux distributions]]></description>
 </item>
 <item>
   <title>Wazuh SIEM &amp; XDR</title>
-  <link>http://example.com/wazuh/</link>
+  <link>https://0xd3d5ec.github.io/cyberblog/wazuh/</link>
   <pubDate>Mon, 09 Oct 2023 13:41:11 &#43;0300</pubDate>
   <author>w01v3r</author>
-  <guid>http://example.com/wazuh/</guid>
+  <guid>https://0xd3d5ec.github.io/cyberblog/wazuh/</guid>
   <description><![CDATA[<div class="featured-image"><img loading="eager" src="wazuh.jpg" alt="Wazuh SIEM &amp; XDR" title="Wazuh SIEM &amp; XDR" referrerpolicy="no-referrer"/></div>Wazuh SIEM, wolf to the rescue&hellip;wazooo!🐺]]></description>
 </item>
 <item>
   <title>Password Generator</title>
-  <link>http://example.com/passwordgen/</link>
+  <link>https://0xd3d5ec.github.io/cyberblog/passwordgen/</link>
   <pubDate>Mon, 09 Oct 2023 00:55:58 &#43;0300</pubDate>
   <author>w01v3r</author>
-  <guid>http://example.com/passwordgen/</guid>
+  <guid>https://0xd3d5ec.github.io/cyberblog/passwordgen/</guid>
   <description><![CDATA[<div class="featured-image"><img loading="eager" src="passgen.png" alt="Password Generator" title="Password Generator" referrerpolicy="no-referrer"/></div>Believe it or not! making complex passwords is actually harder than memorizing them.🤯]]></description>
 </item>
 <item>
   <title>Cybertalents Scholarship</title>
-  <link>http://example.com/cybertalents/</link>
+  <link>https://0xd3d5ec.github.io/cyberblog/cybertalents/</link>
   <pubDate>Mon, 09 Oct 2023 00:42:52 &#43;0300</pubDate>
   <author>w01v3r</author>
-  <guid>http://example.com/cybertalents/</guid>
+  <guid>https://0xd3d5ec.github.io/cyberblog/cybertalents/</guid>
   <description><![CDATA[<div class="featured-image"><img loading="eager" src="cybertalents.png" alt="Cybertalents Scholarship" title="Cybertalents Scholarship" referrerpolicy="no-referrer"/></div>Most sought after scholarship in arabic and african region, read my thrilling journey&hellip;🔥]]></description>
 </item>
 </channel>

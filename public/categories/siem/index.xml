@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
     <title>Siem - Category - Threatscap Vault</title>
-    <link>http://example.com/categories/siem/</link>
+    <link>https://0xd3d5ec.github.io/cyberblog/categories/siem/</link>
     <description>Siem - Category | Threatscap Vault</description>
     <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>abdu_majeed1401@protonmail.com (w01v3r)</managingEditor>
-      <webMaster>abdu_majeed1401@protonmail.com (w01v3r)</webMaster><lastBuildDate>Mon, 09 Oct 2023 13:41:11 &#43;0300</lastBuildDate><atom:link href="http://example.com/categories/siem/" rel="self" type="application/rss+xml" /><item>
+      <webMaster>abdu_majeed1401@protonmail.com (w01v3r)</webMaster><lastBuildDate>Mon, 09 Oct 2023 13:41:11 &#43;0300</lastBuildDate><atom:link href="https://0xd3d5ec.github.io/cyberblog/categories/siem/" rel="self" type="application/rss+xml" /><item>
   <title>Wazuh SIEM &amp; XDR</title>
-  <link>http://example.com/wazuh/</link>
+  <link>https://0xd3d5ec.github.io/cyberblog/wazuh/</link>
   <pubDate>Mon, 09 Oct 2023 13:41:11 &#43;0300</pubDate>
   <author>w01v3r</author>
-  <guid>http://example.com/wazuh/</guid>
+  <guid>https://0xd3d5ec.github.io/cyberblog/wazuh/</guid>
   <description><![CDATA[<div class="featured-image"><img loading="eager" src="wazuh.jpg" alt="Wazuh SIEM &amp; XDR" title="Wazuh SIEM &amp; XDR" referrerpolicy="no-referrer"/></div>Wazuh SIEM, wolf to the rescue&hellip;wazooo!🐺]]></description>
 </item>
 </channel>

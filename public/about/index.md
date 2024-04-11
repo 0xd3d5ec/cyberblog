@@ -32,5 +32,5 @@ w01v3r💀aboutme# ./skills.sh
 ---
 
 > Author:   
-> URL: http://example.com/about/  
+> URL: https://0xd3d5ec.github.io/cyberblog/about/  
 
