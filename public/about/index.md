@@ -1,6 +1,4 @@
-# 
-
-{{&lt; image src=&#34;inscope.png&#34; width=&#34;1000&#34; alt=&#34;inscope destruction&#34; &gt;}}
+# About me
 
 {{&lt; typeit code=bash group=me &gt;}}
 w01v3r💀aboutme# whoami 

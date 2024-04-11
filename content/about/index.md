@@ -1,15 +1,13 @@
 +++
-title = ''
+title = 'About me'
 subtitle = ''
 date = 2023-10-09T02:17:14+03:00
-featuredImage = ''
-featuredImagePreview = ''
+featuredImage = 'inscope.png'
+featuredImagePreview = 'inscope.png'
 tags = []
 categories = []
 draft = false
 +++
-{{< image src="inscope.png" width="1000" alt="inscope destruction" >}}
-
 {{< typeit code=bash group=me >}}
 w01v3r💀aboutme# whoami 
 {{< /typeit >}}
