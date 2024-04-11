@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
-    <title>Blue Teaming - Tag - w01v3r&#39;s cyber dungeon</title>
+    <title>Blue Teaming - Tag - Threatscap Vault</title>
     <link>http://example.com/tags/blue-teaming/</link>
-    <description>Blue Teaming - Tag | w01v3r&#39;s cyber dungeon</description>
+    <description>Blue Teaming - Tag | Threatscap Vault</description>
     <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>abdu_majeed1401@protonmail.com (w01v3r)</managingEditor>
       <webMaster>abdu_majeed1401@protonmail.com (w01v3r)</webMaster><lastBuildDate>Mon, 09 Oct 2023 13:41:11 &#43;0300</lastBuildDate><atom:link href="http://example.com/tags/blue-teaming/" rel="self" type="application/rss+xml" /><item>
   <title>Wazuh SIEM &amp; XDR</title>
