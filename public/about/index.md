@@ -1,4 +1,4 @@
-# About me
+# About
 
 {{&lt; typeit code=bash group=me &gt;}}
 w01v3r💀aboutme# whoami 

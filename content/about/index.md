@@ -1,9 +1,9 @@
 +++
-title = 'About me'
+title = 'About'
 subtitle = ''
 date = 2023-10-09T02:17:14+03:00
-featuredImage = 'inscope.png'
-featuredImagePreview = 'inscope.png'
+featuredImage = 'banner.gif'
+featuredImagePreview = 'banner.gif'
 tags = []
 categories = []
 draft = false
