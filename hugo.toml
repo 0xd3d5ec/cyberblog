@@ -4,7 +4,7 @@ baseURL = "http://example.com/"
 theme = "FixIt"
 
 # website title
-title = "w01v3r's cyber dungeon"
+title = "Threatscap Vault"
 
 # language code ["en", "zh-CN", "fr", "pl", ...]
 languageCode = "en"
@@ -35,7 +35,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   name = "w01v3r"
   email = "abdu_majeed1401@protonmail.com"
   link = ""
-  avatar = "/fav.png"
+  avatar = "favicon-16x16.png"
 
 # Menu config
 [menu]
@@ -101,7 +101,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     #  Header title config
     [params.header.title]
       # URL of the LOGO
-      logo = "w01v3r.png"
+      logo = "favicon-32x32.png"
       # title name
       name = "Threatscape Vault"
       # you can add extra information before the name (HTML format is supported), such as icons
