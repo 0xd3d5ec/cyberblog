@@ -1,18 +1,16 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Backdoor - Tag - w01v3r&#39;s cyber dungeon</title>
-        <link>https://0xd3d5ec.github.io/cyberblog/img/tags/backdoor/</link>
-        <description>Backdoor - Tag - w01v3r&#39;s cyber dungeon</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>abdu_majeed1401@protonmail.com (w01v3r)</managingEditor>
-            <webMaster>abdu_majeed1401@protonmail.com (w01v3r)</webMaster><lastBuildDate>Mon, 08 Apr 2024 22:27:43 &#43;0300</lastBuildDate><atom:link href="https://0xd3d5ec.github.io/cyberblog/img/tags/backdoor/" rel="self" type="application/rss+xml" /><item>
-    <title>CVE-2024-3094 - XZ Linux Backdoor Analysis</title>
-    <link>https://0xd3d5ec.github.io/cyberblog/img/xzbackdoor/</link>
-    <pubDate>Mon, 08 Apr 2024 22:27:43 &#43;0300</pubDate>
-    <author>w01v3r</author>
-    <guid>https://0xd3d5ec.github.io/cyberblog/img/xzbackdoor/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/cyberblog/img/xz%20backdoor.png" referrerpolicy="no-referrer">
-            </div>XZ Linux Backdoor Analysis that affected millions of linux distributions]]></description>
+  <channel>
+    <title>Backdoor - Tag - w01v3r&#39;s cyber dungeon</title>
+    <link>http://localhost:1313/tags/backdoor/</link>
+    <description>Backdoor - Tag | w01v3r&#39;s cyber dungeon</description>
+    <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>abdu_majeed1401@protonmail.com (w01v3r)</managingEditor>
+      <webMaster>abdu_majeed1401@protonmail.com (w01v3r)</webMaster><lastBuildDate>Mon, 08 Apr 2024 22:27:43 &#43;0300</lastBuildDate><atom:link href="http://localhost:1313/tags/backdoor/" rel="self" type="application/rss+xml" /><item>
+  <title>CVE-2024-3094 - XZ Linux Backdoor Analysis</title>
+  <link>http://localhost:1313/xzbackdoor/</link>
+  <pubDate>Mon, 08 Apr 2024 22:27:43 &#43;0300</pubDate>
+  <author>w01v3r</author>
+  <guid>http://localhost:1313/xzbackdoor/</guid>
+  <description><![CDATA[<div class="featured-image"><img loading="eager" src="xz%20backdoor.png" alt="CVE-2024-3094 - XZ Linux Backdoor Analysis" title="CVE-2024-3094 - XZ Linux Backdoor Analysis" referrerpolicy="no-referrer"/></div>XZ Linux Backdoor Analysis that affected millions of linux distributions]]></description>
 </item>
 </channel>
 </rss>

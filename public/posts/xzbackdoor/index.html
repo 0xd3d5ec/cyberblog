@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth" data-default-appearance="dark"
+  data-auto-appearance="false"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  
+  <meta http-equiv="content-language" content="en" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  
+  <title>CVE-2024-3094 - XZ Linux Backdoor Analysis &middot; Threatscape Intel</title>
+  <meta name="title" content="CVE-2024-3094 - XZ Linux Backdoor Analysis &middot; Threatscape Intel" />
+  
+  <meta name="description" content="XZ Linux Backdoor Analysis that affected millions of linux distributions" />
+  <meta name="keywords" content="backdoor, linux, " />
+  
+  
+  <link rel="canonical" href="//localhost:1313/posts/xzbackdoor/" />
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <link type="text/css" rel="stylesheet" href="/css/main.bundle.min.00dd8b9350ecc82ac2af1f4674a9aad6c9a42e761652b3143d532e4b352bd5ca4750a9e040a76fd03e5d53ef1eb025fa8d60f7c673632f7ca0683ece7f990542.css"
+    integrity="sha512-AN2Lk1DsyCrCrx9GdKmq1smkLnYWUrMUPVMuSzUr1cpHUKngQKdv0D5dU&#43;8esCX6jWD3xnNjL3ygaD7Of5kFQg==" />
+  
+  
+  <script type="text/javascript" src="/js/appearance.min.516a16745bea5a9bd011138d254cc0fd3973cd55ce6e15f3dec763e7c7c2c7448f8fe7b54cca811cb821b0c7e12cd161caace1dd794ac3d34d40937cbcc9ee12.js"
+    integrity="sha512-UWoWdFvqWpvQERONJUzA/TlzzVXObhXz3sdj58fCx0SPj&#43;e1TMqBHLghsMfhLNFhyqzh3XlKw9NNQJN8vMnuEg=="></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.3f354537071ffde8a37d7f5b5eb0fea76345387a132a0c386682cae063b66ebb6285757ca88352be474056280043b16f4f53986014c1f818a9aabf17220ae601.js"
+    integrity="sha512-PzVFNwcf/eijfX9bXrD&#43;p2NFOHoTKgw4ZoLK4GO2brtihXV8qINSvkdAVigAQ7FvT1OYYBTB&#43;Bipqr8XIgrmAQ==" data-copy="" data-copied=""></script>
+  
+  
+  <script src="/js/zoom.min.js"></script>
+  
+  
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:title" content="CVE-2024-3094 - XZ Linux Backdoor Analysis" />
+<meta property="og:description" content="XZ Linux Backdoor Analysis that affected millions of linux distributions" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//localhost:1313/posts/xzbackdoor/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-04-08T22:27:43+03:00" />
+<meta property="article:modified_time" content="2024-04-08T22:27:43+03:00" />
+
+  <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="CVE-2024-3094 - XZ Linux Backdoor Analysis"/>
+<meta name="twitter:description" content="XZ Linux Backdoor Analysis that affected millions of linux distributions"/>
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "CVE-2024-3094 - XZ Linux Backdoor Analysis",
+    "headline": "CVE-2024-3094 - XZ Linux Backdoor Analysis",
+    
+    "abstract": "XZ Linux Backdoor Analysis that affected millions of linux distributions",
+    "inLanguage": "en",
+    "url" : "\/\/localhost:1313\/posts\/xzbackdoor\/",
+    "author" : {
+      "@type": "Person",
+      "name": ""
+    },
+    "copyrightYear": "2024",
+    "dateCreated": "2024-04-08T22:27:43\u002b03:00",
+    "datePublished": "2024-04-08T22:27:43\u002b03:00",
+    
+    "dateModified": "2024-04-08T22:27:43\u002b03:00",
+    
+    "keywords": ["backdoor","linux"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1584"
+  }]
+  </script>
+
+
+  
+  
+  
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.js" integrity=""></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+  
+  
+  <meta name="theme-color"/>
+  
+  
+</head>
+<body
+  class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32">
+  <div id="the-top" class="absolute flex self-center">
+    <a class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+      href="#main-content"><span
+        class="font-bold text-primary-600 ltr:pr-2 rtl:pl-2 dark:text-primary-400">&darr;</span>Skip to main content</a>
+  </div>
+  
+  
+  <div class="min-h-[148px]"></div>
+<div class="fixed inset-x-0 pl-[24px] pr-[24px]" style="z-index:100">
+  <div id="menu-blur" class="absolute opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl shadow-2xl"></div>
+  <div class="relative max-w-[64rem] ml-auto mr-auto">
+    <div style="padding-left:0;padding-right:0;padding-top:2px;padding-bottom:3px"
+    class="main-menu flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start space-x-3">
+    
+    <div class="flex flex-1 items-center justify-between">
+        <nav class="flex space-x-3">
+
+            
+            <a href="/" class="text-base font-medium text-gray-500 hover:text-gray-900">Threatscape Intel</a>
+            
+
+        </nav>
+        <nav class="hidden md:flex items-center space-x-5 md:ml-12 h-12">
+
+            
+
+            
+
+
+            
+            <button id="search-button" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+
+            
+            
+            <div
+                class="ltr:mr-14 rtl:ml-14 flex items-center">
+                <button id="appearance-switcher" aria-label="Dark mode switcher" type="button" class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+                    <div class="flex items-center justify-center dark:hidden">
+                        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+                    </div>
+                    <div class="items-center justify-center hidden dark:flex">
+                        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+                    </div>
+                </button>
+            </div>
+            
+
+        </nav>
+        <div class="flex md:hidden items-center space-x-5 md:ml-12 h-12">
+
+            <span></span>
+
+            
+
+
+            
+            <button id="search-button-mobile" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+            
+            
+            <button id="appearance-switcher-mobile" aria-label="Dark mode switcher" type="button" class="text-base hover:text-primary-600 dark:hover:text-primary-400" style="margin-right:5px">
+                <div class="flex items-center justify-center dark:hidden">
+                    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+                </div>
+                <div class="items-center justify-center hidden dark:flex">
+                    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+                </div>
+            </button>
+            
+
+        </div>
+    </div>
+    <div class="-my-2 -mr-2 md:hidden">
+
+        <label id="menu-button" for="menu-controller" class="block">
+            <input type="checkbox" id="menu-controller" class="hidden" />
+            
+
+            </div>
+        </label>
+    </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+<script>
+  window.addEventListener('scroll', function (e) {
+    var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    var background_blur = document.getElementById('menu-blur');
+    background_blur.style.opacity = (scroll / 300);
+  });
+</script>
+
+  
+  <div class="relative flex flex-col grow">
+    <main id="main-content" class="grow">
+      
+
+
+<article>
+  
+
+  <header id="single_header" class="mt-5 max-w-prose">
+    
+    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+      CVE-2024-3094 - XZ Linux Backdoor Analysis
+    </h1>
+    <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+      
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2024-04-08 22:27:43 &#43;0300 &#43;03">8 April 2024</time><span class="px-2 text-primary-500">&middot;</span><span>1584 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">8 mins</span>
+  
+
+  
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+
+    
+    
+    
+    
+    
+
+    
+
+    
+      
+      
+        
+        
+<div class="flex author">
+  
+  <div class="place-self-center">
+    
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+
+      
+
+      
+
+      
+      <div class="mb-5"></div>
+      
+
+    
+
+  </header>
+  
+  <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+    
+    
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+        
+
+
+        <div class="article-content max-w-prose mb-20">
+          
+
+<h2 class="relative group">Intro 
+    <div id="intro" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#intro" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>Hello folks👋, I will be talking today about the recent incdient of the XZ Utils backdoor that compromised a lot of linux distributions across the world. This incident made the headlines.</p>
+<p>We are going to dive deep into the intricacies and about how this sophisticated attack came to be. This type of attack falls under the type of supply chain attack targeting the XZ Utils project, aimed at embedding a backdoor within linux systems.</p>
+<p>We&rsquo;ll explore the sequence of events leading up to the attack&rsquo;s discovery. Discuss the mechanisms the attacker used, assess the potential repercussions had the attack remained undetected, and reflect on the critical lessons this incident teaches us about cyber security in open-source projects.</p>
+<p>Finally, I will wrap up with lessons learned, a detailed lab environment and the importance of vigilence and proactive security measures in the open-source ecosystem.</p>
+
+
+<h2 class="relative group">Understanding the Attack 
+    <div id="understanding-the-attack" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#understanding-the-attack" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>On Mar 29, 2024 at 12:00PM ET, Andres Freund <a href="https://www.openwall.com/lists/oss-security/2024/03/29/4"   target="_blank">
+    posted</a>on the Openwall mailing list about a backdoor he discovered in the <a href="https://github.com/tukaani-project/xz"   target="_blank">
+    <em>XZ Utils</em></a>package. The backdoor targeted the <a href="https://www.openssh.com/"   target="_blank">
+    OpenSSH</a> binary, allowing remote code execution on impacted machines. This backdoor was not located in the GitHub repository, but only in release versions of the package, which hid its presence.</p>
+<p>Due to the reason XZ Utils had been installed (directly or indirectly) on billions of Linux systems worldwide, this discovery shocked the international Linux and infosec communities.</p>
+
+
+<h2 class="relative group">Understanding the timeline of the attack 
+    <div id="understanding-the-timeline-of-the-attack" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#understanding-the-timeline-of-the-attack" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>In late 2021, &ldquo;Jia Tan&rdquo;, an online identity, began a long and careful supply-chain attack with the goal of inserting a backdoor into Linux systems. Jia Tan submitted multiple contribution requests to several projects, including the XZ Utils project, and began harrasing Lasse Collin and other open source maintainers through various <a href="https://research.swtch.com/xz-timeline#jia_tan_arrives_on_scene_with_supporting_cast"   target="_blank">
+    sock puppet accounts</a>to get their XZ contributions accepted and ultimately, by late 2022, Jia Tan became a maintainer of the XZ project.</p>
+<p>During 2023 and early 2024, Jia Tan started making multiple changes to various open-source projects. This included <a href="https://github.com/google/oss-fuzz/pull/10667"   target="_blank">
+    submitting a merge request</a>to <a href="https://github.com/google/oss-fuzz"   target="_blank">
+    google/oss-fuzz</a>, which developers use to validate their code. Apparently, the goal of this update was to take ownership of the XZ Utils project and disable specific features in order to hide certain errors that could reveal the planned backdoor.</p>
+<p>Finally, in early 2024, Jia Tan released XZ Utils 5.6.0 as a tarball, which is the most common method of releasing software on GitHub. Specifically, they performed <a href="https://git.tukaani.org/?p=xz.git;a=commitdiff;h=cf44e4b7f5dfdbf8c78aef377c10f71e274f63c0"   target="_blank">
+    two commits</a> that added <a href="https://git.tukaani.org/?p=xz.git;a=commitdiff;h=6e636819e8f070330d835fce46289a3ff72a7b89"   target="_blank">
+    &ldquo;test&rdquo; files</a> that included the backdoor in the released version of the software. Since these were binary files, and not plain text, the &ldquo;test&rdquo; files were more obfuscated from the community.</p>
+<p>Following the release of version 5.6.0, Jia Tan rushed out a 5.6.1 release in an attempt to fix some failures that were occurring with the backdoor, with the hope of fixing them before they were spotted.</p>
+<blockquote>
+<p>In total, Jia Tan made at least <a href="https://git.tukaani.org/?p=xz.git;a=search;pg=0;s=Jia&#43;Tan;st=author"   target="_blank">
+    450 commits</a> to the XZ GitHub, beginning on June 10, 2022.</p>
+</blockquote>
+<p>Eventually, on March 29, 2024 at 12:00PM ET, <a href="https://www.openwall.com/lists/oss-security/2024/03/29/4"   target="_blank">
+    Andres Freund</a> noticed a delay in the operation of SSH when running unstable version of Debian. Without the discovery of this SSH delay and various <a href="https://valgrind.org/"   target="_blank">
+    <em>valgrind</em></a> test errors, the community may not have discovered this vulnerability until it had run its course, infecting untold thousands or millions of machines.</p>
+<p>Despite the discovery of this vulnerability, the community is still wrestling with the potential scale and ramifications of the attack.</p>
+<blockquote>
+<p>Russ Cox presented an excellent <a href="https://research.swtch.com/xz-timeline"   target="_blank">
+    detailed timeline</a> of this attack, and @rheaeve posted an informative <a href="https://rheaeve.substack.com/p/xz-backdoor-times-damned-times-and"   target="_blank">
+    timezone investigation</a>, both of which served as outstanding community resources.</p>
+</blockquote>
+
+
+<h2 class="relative group">Grasping the Technical Overview of the Attack 
+    <div id="grasping-the-technical-overview-of-the-attack" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#grasping-the-technical-overview-of-the-attack" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>To summarize, the widely-used XZ utils package, which contains the xz and the <em>liblzma</em> library, contained the obfuscated code that <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-3094"   target="_blank">
+    created a backdoor</a> in the OpenSSH service on many linux systems using XZ utils versions (5.6.0 -&gt; 5.6.1). This supply-chain attack was executed over trust-buildng campaign spanning two years🤯.</p>
+<p>From a technical standpoint, the backdoor was created when the tarball was generated for release tag. In other words, the backdoor was not created if the user built the tool manually from it&rsquo;s git repo.</p>
+<p>Thus, it is safe to assume the attacker was mainly targetting Debian and RPM-based systems which depend on this tarball for their package installers. Alternatively, systems that do not rely on this method of packaging, such as Arch Linux, were not impacted by this vulnerability. I love arch btw💘😉.</p>
+
+
+<h2 class="relative group">Assessing the Potential Impact of the Attack 
+    <div id="assessing-the-potential-impact-of-the-attack" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#assessing-the-potential-impact-of-the-attack" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>What makes this tremendously dangerous and attractive for such sophisticated attacks is that XZ utils is widely used over 3 billion machines, lightweight, easy to use and widely available.</p>
+<p>Given the widespead usage of this package, this attack could have impacted the security of linux systems worldwide, specially those that are running OpenSSH. The impact of this would have been devastating. Put simply, it&rsquo;s possible that this vulnerability could have granted Jia Tan and his allies or sponsors open access to every affected internet facing SSH server, globally, including those run by governments and high profile global entities.</p>
+<p>This attack had the potential to weaken the global linux security posture and could have triggered untold millions of dollars in damages, or worse, it could have affected global infrastucture or even the health and safety of countless citizens.</p>
+
+
+<h2 class="relative group">Learning from the incident 
+    <div id="learning-from-the-incident" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#learning-from-the-incident" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>Let&rsquo;s review some of the potential lessons that we can learn from this incident.</p>
+<p>First, this high-profile attack has raised concerns about the security and trustworthiness of the open-source projects. At the same time, the open-source process of testing and collective effort worked in this case, as the vulnerability was discovered before it getting pushed from unstable to stable distributions.</p>
+<p>In addition, the discovery of this sophisticaed attack raises questions regarding the safety of other open-source projects that may have already been struck with a similar fate.</p>
+<p>This incident has highlighted the fact that solo open-source developers of high-profile projects are often overwhelmed. We cant simply completely rely on one person to do everything. We have to ensure that developers, maintainers and contributors are trustworthy.</p>
+<p>We also need to develop tools, techniques and procedures tha tensure the validity and the safety of our code, especially binary objects and their components.</p>
+<p>Finally, we must develop and implement tools, techniques and procedures that help detect not only supply-chain attacks but also the systems affected by these attacks in the event of breach.</p>
+
+
+<h2 class="relative group">Testing Lab 
+    <div id="testing-lab" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#testing-lab" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>In this lab, I will be deploying two machines, <strong>Kali</strong>(backdoored package installed) and <strong>Debian</strong>(clean package). The Debian machine will serve as a baseline as we discuss the behavioral analysis that led to the discovery of this backdoor.</p>
+<p>First I will add two entries to the hosts file in our VM machines.
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+      <figure >
+        
+          
+          <img
+            class="my-0 rounded-md"
+            srcset="
+            /posts/xzbackdoor/i2_hu1934224033e67c7dfa08d2b0dc7f9be3_16106_330x0_resize_box_3.png 330w,
+            /posts/xzbackdoor/i2_hu1934224033e67c7dfa08d2b0dc7f9be3_16106_660x0_resize_box_3.png 660w,
+            /posts/xzbackdoor/i2_hu1934224033e67c7dfa08d2b0dc7f9be3_16106_1024x0_resize_box_3.png 1024w,
+            /posts/xzbackdoor/i2_hu1934224033e67c7dfa08d2b0dc7f9be3_16106_1320x0_resize_box_3.png 2x"
+            src="/posts/xzbackdoor/i2_hu1934224033e67c7dfa08d2b0dc7f9be3_16106_660x0_resize_box_3.png"
+            alt=""
+          />
+          
+        
+        
+      </figure>
+    
+  
+
+</p>
+<p>Here as you can see we have the backdoored version of the package to install on kali VM. It can be obtained from the Debian package snapshots. 
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+      <figure >
+        
+          
+          <img
+            class="my-0 rounded-md"
+            srcset="
+            /posts/xzbackdoor/i1_hu48924a874624ed1bf2b673e01446d1f2_18037_330x0_resize_box_3.png 330w,
+            /posts/xzbackdoor/i1_hu48924a874624ed1bf2b673e01446d1f2_18037_660x0_resize_box_3.png 660w,
+            /posts/xzbackdoor/i1_hu48924a874624ed1bf2b673e01446d1f2_18037_1024x0_resize_box_3.png 1024w,
+            /posts/xzbackdoor/i1_hu48924a874624ed1bf2b673e01446d1f2_18037_1320x0_resize_box_3.png 2x"
+            src="/posts/xzbackdoor/i1_hu48924a874624ed1bf2b673e01446d1f2_18037_660x0_resize_box_3.png"
+            alt=""
+          />
+          
+        
+        
+      </figure>
+    
+  
+
+</p>
+<p>After getting the vulnerable package, it&rsquo;s time to instasll it with</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt-get install -y --allow-downgrades  ./liblzma5_5.6.1-1_amd64.deb
+</span></span></code></pre></div><p>then we need to reload static library object of the vulnerable version with</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl restart ssh
+</span></span></code></pre></div><p>now our kali machine is vulnerable to <em>CVE-2024-3094</em>. Let&rsquo;s check it out.</p>
+<p>First, let&rsquo;s detect if this version of <em>liblzma</em> contains the backdoor. We&rsquo;ll use Vegard Nossom&rsquo;s script, <strong>detect.sh</strong> which was provided in the  <a href="https://www.openwall.com/lists/oss-security/2024/03/29/4"   target="_blank">
+    disclosure</a>. The script is already located in the home directory. Let&rsquo;s use <strong>cat</strong> to view the script and analyze it.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">┌──<span class="o">(</span>abdo💀rog<span class="o">)</span>-<span class="o">[</span>~/Downloads<span class="o">]</span>
+</span></span><span class="line"><span class="cl">└─$ cat detect.sh 
+</span></span><span class="line"><span class="cl"><span class="c1">#! /bin/bash</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> -eu
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># find path to liblzma used by sshd</span>
+</span></span><span class="line"><span class="cl"><span class="nv">path</span><span class="o">=</span><span class="s2">&#34;</span><span class="k">$(</span>ldd <span class="k">$(</span>which sshd<span class="k">)</span> <span class="p">|</span> grep liblzma <span class="p">|</span> grep -o <span class="s1">&#39;/[^ ]*&#39;</span><span class="k">)</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># does it even exist?</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$path</span><span class="s2">&#34;</span> <span class="o">==</span> <span class="s2">&#34;&#34;</span> <span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="k">then</span>
+</span></span><span class="line"><span class="cl">	<span class="nb">echo</span> probably not vulnerable
+</span></span><span class="line"><span class="cl">	<span class="nb">exit</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># check for function signature</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> hexdump -ve <span class="s1">&#39;1/1 &#34;%.2x&#34;&#39;</span> <span class="s2">&#34;</span><span class="nv">$path</span><span class="s2">&#34;</span> <span class="p">|</span> grep -q f30f1efa554889f54c89ce5389fb81e7000000804883ec28488954241848894c2410
+</span></span><span class="line"><span class="cl"><span class="k">then</span>
+</span></span><span class="line"><span class="cl">	<span class="nb">echo</span> probably vulnerable
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">	<span class="nb">echo</span> probably not vulnerable
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span></code></pre></div><p>The script uses <em>ldd</em> to list the shared libraries loaded by the <em>sshd</em> binary and then searches for <em>liblzma</em>_ to determine its path.</p>
+<p>Then, the command <code>hexdump -ve '1/1 &quot;%.2x&quot;' &lt;&lt;file&gt;&gt;</code> will dump the <em>sshd</em> binary in hexadecimal form, without any formatting, producing a long hex string. The script then searches for a hexadecimal pattern that serves as a signature for the backdoor.</p>
+<p>As a result, if the script finds the signature, our binary has been backdoored.</p>
+<p>Let&rsquo;s run the script on the <em>kali-backdoor</em> machine first.</p>
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+      <figure >
+        
+          
+          <img
+            class="my-0 rounded-md"
+            srcset="
+            /posts/xzbackdoor/i3_hu519f0cc54e9f4cb1febb7dfefc345ad5_26058_330x0_resize_box_3.png 330w,
+            /posts/xzbackdoor/i3_hu519f0cc54e9f4cb1febb7dfefc345ad5_26058_660x0_resize_box_3.png 660w,
+            /posts/xzbackdoor/i3_hu519f0cc54e9f4cb1febb7dfefc345ad5_26058_1024x0_resize_box_3.png 1024w,
+            /posts/xzbackdoor/i3_hu519f0cc54e9f4cb1febb7dfefc345ad5_26058_1320x0_resize_box_3.png 2x"
+            src="/posts/xzbackdoor/i3_hu519f0cc54e9f4cb1febb7dfefc345ad5_26058_660x0_resize_box_3.png"
+            alt=""
+          />
+          
+        
+        
+      </figure>
+    
+  
+
+
+<p>In the next section, we&rsquo;ll use behavioral anlysis to identify this backdoor without needing to log into the servers.</p>
+
+
+<h2 class="relative group">Confirm that the SSH Daemon is Slower than Usual 
+    <div id="confirm-that-the-ssh-daemon-is-slower-than-usual" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#confirm-that-the-ssh-daemon-is-slower-than-usual" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>This vulnerability was discovered because of a small delay in the SSH rseponse time caused by peaks of CPU usage consumed by the sshd service. This anomaly remained unnoticed until Andres Freund ran a benchmark.</p>
+<p>Let&rsquo;s check this in our small lab. We&rsquo;ll SSH into both machines and compare their behaviors.
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+      <figure >
+        
+          
+          <img
+            class="my-0 rounded-md"
+            srcset="
+            /posts/xzbackdoor/i4_huf82ec475ba7cd3ad728e1d74ff3fcf94_60270_330x0_resize_box_3.png 330w,
+            /posts/xzbackdoor/i4_huf82ec475ba7cd3ad728e1d74ff3fcf94_60270_660x0_resize_box_3.png 660w,
+            /posts/xzbackdoor/i4_huf82ec475ba7cd3ad728e1d74ff3fcf94_60270_1024x0_resize_box_3.png 1024w,
+            /posts/xzbackdoor/i4_huf82ec475ba7cd3ad728e1d74ff3fcf94_60270_1320x0_resize_box_3.png 2x"
+            src="/posts/xzbackdoor/i4_huf82ec475ba7cd3ad728e1d74ff3fcf94_60270_660x0_resize_box_3.png"
+            alt=""
+          />
+          
+        
+        
+      </figure>
+    
+  
+
+</p>
+<p>Both commands produced a &ldquo;Permission denied&rdquo; error message. This is expected since we didn&rsquo;t submit valid authentication keys. However, the output of the <strong>time</strong> command, specifically the <em>real</em> value, reveals the time it took the command to present the error message.</p>
+<p>Although the real values may vary depending on many factors, the vulnerable machine clearly took longer to respond. We can repeat these exercise many times and each time, the backdoored machine will take longer to respond.</p>
+<p>This is exactly what Andres Freund noticed, which drove him to dive deeper in his investigation.</p>
+<p>We could write a custom scanner to test this, allowing us to remotely determine if a server has potentially been backdoored.</p>
+<p>Until next time cyaa.👋</p>
+
+        </div>
+        
+        
+
+        
+        
+
+          
+      </div>
+     
+      
+      
+        
+        
+          
+          
+        
+      <script>
+        var oid = "views_posts\\xzbackdoor\\index.md"
+        var oid_likes = "likes_posts\\xzbackdoor\\index.md"
+      </script>
+      
+      
+      
+      <script type="text/javascript" src="/js/page.min.b06a29d42a4ed16787978e2eee1e8c797b7698db2bc14ccee78f5c80ac566fc996190a73ad80a5e987558474b20b96fa38f7d85b405f165ff72b7b163c5ad11b.js" integrity="sha512-sGop1CpO0WeHl44u7h6MeXt2mNsrwUzO549cgKxWb8mWGQpzrYCl6YdVhHSyC5b6OPfYW0BfFl/3K3sWPFrRGw=="></script>
+  
+    </section>
+  <footer class="pt-8 max-w-prose print:hidden">
+
+    
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="flex group mr-3" href="/posts/wazuh/">
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Wazuh SIEM & XDR</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2023-10-09 13:41:11 &#43;0300 &#43;03">9 October 2023</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+    
+  </footer>
+</article>
+
+      <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
+  <a href="#the-top"
+    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top" title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+    </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+
+    
+    
+    <p class="text-sm text-neutral-500 dark:text-neutral-400">
+      &copy;
+      2024
+      
+    </p>
+    
+
+    
+    
+    <p class="text-xs text-neutral-500 dark:text-neutral-400">
+      
+      
+      Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+        href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+        href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+    </p>
+    
+
+  </div>
+  <script>
+    
+    mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+      margin: 24,
+      background: 'rgba(0,0,0,0.5)',
+      scrollOffset: 0,
+    })
+    
+  </script>
+  
+  
+  <script type="text/javascript" src="/js/process.min.62060bb247f4de2b6dde45903668fefb68d792f365587605177b1227c0cf43588701edaca0cb40e2c8e2789bd5ce67c1d2a215b9fb258c3496a7cd25e7cb5fdf.js" integrity="sha512-YgYLskf03itt3kWQNmj&#43;&#43;2jXkvNlWHYFF3sSJ8DPQ1iHAe2soMtA4sjieJvVzmfB0qIVufsljDSWp80l58tf3w=="></script>
+  
+  
+</footer><div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="//localhost:1313/"
+  style="z-index:500"
+>
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)"
+      >
+        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+  </div>
+</body>
+
+</html>
