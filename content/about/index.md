@@ -2,12 +2,14 @@
 title = 'About'
 subtitle = ''
 date = 2023-10-09T02:17:14+03:00
-featuredImage = 'banner.gif'
-featuredImagePreview = 'banner.gif'
+featuredImage = ''
+featuredImagePreview = ''
 tags = []
 categories = []
 draft = false
 +++
+{{<image src="inscope.png" alt="boom">}}
+
 {{< typeit code=bash group=me >}}
 w01v3r💀aboutme# whoami 
 {{< /typeit >}}

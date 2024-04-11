@@ -1,5 +1,7 @@
 # About
 
+{{&lt;image src=&#34;inscope.png&#34; alt=&#34;boom&#34;&gt;}}
+
 {{&lt; typeit code=bash group=me &gt;}}
 w01v3r💀aboutme# whoami 
 {{&lt; /typeit &gt;}}
