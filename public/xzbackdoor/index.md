@@ -136,5 +136,5 @@ Until next time cyaa.👋
 ---
 
 > Author: w01v3r  
-> URL: http://localhost:1313/xzbackdoor/  
+> URL: http://example.com/xzbackdoor/  
 

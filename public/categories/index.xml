@@ -1,47 +1,47 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
     <title>Categories - Category - w01v3r&#39;s cyber dungeon</title>
-    <link>http://localhost:1313/categories/</link>
+    <link>http://example.com/categories/</link>
     <description>Categories - Category | w01v3r&#39;s cyber dungeon</description>
     <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>abdu_majeed1401@protonmail.com (w01v3r)</managingEditor>
-      <webMaster>abdu_majeed1401@protonmail.com (w01v3r)</webMaster><lastBuildDate>Mon, 08 Apr 2024 22:27:43 &#43;0300</lastBuildDate><atom:link href="http://localhost:1313/categories/" rel="self" type="application/rss+xml" /><item>
+      <webMaster>abdu_majeed1401@protonmail.com (w01v3r)</webMaster><lastBuildDate>Mon, 08 Apr 2024 22:27:43 &#43;0300</lastBuildDate><atom:link href="http://example.com/categories/" rel="self" type="application/rss+xml" /><item>
   <title>Red Team</title>
-  <link>http://localhost:1313/categories/red-team/</link>
+  <link>http://example.com/categories/red-team/</link>
   <pubDate>Mon, 08 Apr 2024 22:27:43 &#43;0300</pubDate>
   <author>w01v3r</author>
-  <guid>http://localhost:1313/categories/red-team/</guid>
+  <guid>http://example.com/categories/red-team/</guid>
   <description><![CDATA[]]></description>
 </item>
 <item>
   <title>Projects</title>
-  <link>http://localhost:1313/categories/projects/</link>
+  <link>http://example.com/categories/projects/</link>
   <pubDate>Mon, 09 Oct 2023 13:41:11 &#43;0300</pubDate>
   <author>w01v3r</author>
-  <guid>http://localhost:1313/categories/projects/</guid>
+  <guid>http://example.com/categories/projects/</guid>
   <description><![CDATA[]]></description>
 </item>
 <item>
   <title>Siem</title>
-  <link>http://localhost:1313/categories/siem/</link>
+  <link>http://example.com/categories/siem/</link>
   <pubDate>Mon, 09 Oct 2023 13:41:11 &#43;0300</pubDate>
   <author>w01v3r</author>
-  <guid>http://localhost:1313/categories/siem/</guid>
+  <guid>http://example.com/categories/siem/</guid>
   <description><![CDATA[]]></description>
 </item>
 <item>
   <title>Code</title>
-  <link>http://localhost:1313/categories/code/</link>
+  <link>http://example.com/categories/code/</link>
   <pubDate>Mon, 09 Oct 2023 00:55:58 &#43;0300</pubDate>
   <author>w01v3r</author>
-  <guid>http://localhost:1313/categories/code/</guid>
+  <guid>http://example.com/categories/code/</guid>
   <description><![CDATA[]]></description>
 </item>
 <item>
   <title>Stories</title>
-  <link>http://localhost:1313/categories/stories/</link>
+  <link>http://example.com/categories/stories/</link>
   <pubDate>Mon, 09 Oct 2023 00:42:52 &#43;0300</pubDate>
   <author>w01v3r</author>
-  <guid>http://localhost:1313/categories/stories/</guid>
+  <guid>http://example.com/categories/stories/</guid>
   <description><![CDATA[]]></description>
 </item>
 </channel>

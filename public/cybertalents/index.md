@@ -27,5 +27,5 @@ Getting accepted in this scholarship is a dream come true you might say, getting
 ---
 
 > Author: w01v3r  
-> URL: http://localhost:1313/cybertalents/  
+> URL: http://example.com/cybertalents/  
 

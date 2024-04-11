@@ -32,5 +32,5 @@ w01v3r💀aboutme# ./skills.sh
 ---
 
 > Author:   
-> URL: http://localhost:1313/about/  
+> URL: http://example.com/about/  
 

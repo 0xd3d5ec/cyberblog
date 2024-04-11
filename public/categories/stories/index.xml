@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
     <title>Stories - Category - w01v3r&#39;s cyber dungeon</title>
-    <link>http://localhost:1313/categories/stories/</link>
+    <link>http://example.com/categories/stories/</link>
     <description>Stories - Category | w01v3r&#39;s cyber dungeon</description>
     <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>abdu_majeed1401@protonmail.com (w01v3r)</managingEditor>
-      <webMaster>abdu_majeed1401@protonmail.com (w01v3r)</webMaster><lastBuildDate>Mon, 09 Oct 2023 00:42:52 &#43;0300</lastBuildDate><atom:link href="http://localhost:1313/categories/stories/" rel="self" type="application/rss+xml" /><item>
+      <webMaster>abdu_majeed1401@protonmail.com (w01v3r)</webMaster><lastBuildDate>Mon, 09 Oct 2023 00:42:52 &#43;0300</lastBuildDate><atom:link href="http://example.com/categories/stories/" rel="self" type="application/rss+xml" /><item>
   <title>Cybertalents Scholarship</title>
-  <link>http://localhost:1313/cybertalents/</link>
+  <link>http://example.com/cybertalents/</link>
   <pubDate>Mon, 09 Oct 2023 00:42:52 &#43;0300</pubDate>
   <author>w01v3r</author>
-  <guid>http://localhost:1313/cybertalents/</guid>
+  <guid>http://example.com/cybertalents/</guid>
   <description><![CDATA[<div class="featured-image"><img loading="eager" src="cybertalents.png" alt="Cybertalents Scholarship" title="Cybertalents Scholarship" referrerpolicy="no-referrer"/></div>Most sought after scholarship in arabic and african region, read my thrilling journey&hellip;🔥]]></description>
 </item>
 </channel>
